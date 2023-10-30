@@ -1,0 +1,9 @@
+VERSÃO PHP: 8.1.13
+
+Coisas que faltam fazer:
+
+Arrumar as imagens do site;
+Escolher perguntas e respostas melhores para colocar;
+Arrumar os modais dos produtos, carrossel e quando ele abre em determinadas resolução o modal não abre
+Arrumar a foto de perfil quan não está atualizando
+Arrumar as validações da cadastro
