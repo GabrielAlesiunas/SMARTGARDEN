@@ -16,15 +16,19 @@ function openModal(titulo, descricao, imagens, preco) {
     function prevSlide() {
         if (currentImage > 0) {
             currentImage--;
-            updateSlide();
+        } else {
+            currentImage = imagens.length - 1;
         }
+        updateSlide();
     }
-
+    
     function nextSlide() {
         if (currentImage < imagens.length - 1) {
             currentImage++;
-            updateSlide();
+        } else {
+            currentImage = 0;
         }
+        updateSlide();
     }
 
     function updateSlide() {
@@ -125,7 +129,7 @@ var productData2 = {
   titulo: "Kit Mini Suculentas com 20 unidades",
   descricao: "Kit com 20 mudas...",
   imagens: [
-    "/assets/img/product1.png",
+    "/assets/img/produto2.png",
     "/assets/img/product2.png",
     "/assets/img/product3.png",
   ],
@@ -135,7 +139,7 @@ var productData3 = {
     titulo: "Kit Mini Suculentas com 20 unidades",
     descricao: "Kit com 20 mudas...",
     imagens: [
-      "/assets/img/product1.png",
+      "/assets/img/produto3.png",
       "/assets/img/product2.png",
       "/assets/img/product3.png",
     ],

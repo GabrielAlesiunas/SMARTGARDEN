@@ -14,7 +14,7 @@
 <body>
 
 
-            <!-- ---------------CADASTRO---------------  -->
+    <!-- ---------------CADASTRO---------------  -->
     <div class="container">
         <div class="content first-content">
             <div class="first-column">
@@ -26,31 +26,37 @@
             <div class="second-column">
                 <h2 class="title title-second">Criar uma conta</h2>
                 <p class="description description-second">Use seu e-mail para inscrição:</p>
-                <form action="cadastro.php" method="post" class="form" id="cadastroForm">
+                <form action="cadastro.php" method="post" class="form" id="cadastroForm" onsubmit="return validateCadastro();">
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
-                        <input type="text" name="nome" id="cdtnome" placeholder="Nome" autofocus required oninput="nameValidate()">
-                        <!-- <span class="span-required" style="display: none">Nome deve ter no mínimo 3 caracteres</span> -->
+                        <input type="text" name="nome" id="cdtnome" placeholder="Nome" autofocus required oninput="nomeValidate()">
                     </label>
 
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
                         <input type="email" name="email" id="cdtemail" placeholder="Email" autofocus required oninput="emailValidate()">
-                        <!-- <span class="span-required-email">Digite um email válido</span> -->
                     </label>
 
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
                         <input type="password" name="senha" id="cdtsenha" placeholder="Senha" required oninput="senhaValidate()">
-                        <!-- <span class="span-required-senha"> dsadasdasd</span> -->
                     </label>
+
+                    <div class="password-strength-indicator">
+                        <div class="indicator">
+                            <span class="fraco"></span>
+                            <span class="medio"></span>
+                            <span class="forte"></span>
+                        </div>
+                        <div class="text">Fraca</div>
+                    </div>
 
                     <button class="btn btn-second" type="submit" name="submit">Inscrever-se</button>
                 </form>
             </div><!-- second column -->
         </div><!-- first content -->
 
-            <!-- ---------------LOGIN---------------  -->        
+        <!-- ---------------LOGIN---------------  -->
         <div class="content second-content">
             <div class="first-column">
                 <h2 class="title title-primary">olá amigo!</h2>
@@ -65,7 +71,7 @@
 
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
-                        <input type="text" name="nome" id="lgnome" placeholder="Nome"required>
+                        <input type="text" name="nome" id="lgnome" placeholder="Nome" required>
                     </label>
 
                     <label class="label-input" for="">

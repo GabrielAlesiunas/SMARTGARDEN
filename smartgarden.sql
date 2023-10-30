@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 25-Out-2023 às 18:08
--- Versão do servidor: 8.0.27
--- versão do PHP: 8.0.13
+-- Tempo de geração: 30-Out-2023 às 22:18
+-- Versão do servidor: 8.0.31
+-- versão do PHP: 8.1.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -66,15 +66,17 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `senha` varchar(20) DEFAULT NULL,
   `foto_perfil` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
 INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`, `foto_perfil`) VALUES
-(1, 'Gabriel', 'gabriel.alesiunas@yahoo.com.br', '@Ghjk87yzwe99', NULL),
-(8, 'admin', 'admin@gmail.com', 'Admin123@', NULL);
+(1, 'Gabriel', 'gabriel.alesiunas@yahoo.com.br', '@Ghjk87yzwe99', 'assets/img/imgPerfilIsxisd.jpg'),
+(8, 'admin', 'admin@gmail.com', 'Admin123@', 'assets/img/imgPerfilcorinthians.jpeg'),
+(13, 'a', 'teste@gmail.com', '123', 'assets/img/imgPerfil/userpadrao.png'),
+(14, 'adc', 'd@gmail.com', 'd', 'assets/img/imgPerfil/userpadrao.png');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

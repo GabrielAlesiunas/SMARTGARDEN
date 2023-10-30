@@ -12,25 +12,6 @@ btnSignup.addEventListener("click", function () {
     body.className = "sign-up-js";
 })
 
-function realizarCadastro() {
-    var cdtnome = document.getElementById("cdtnome").value.trim();
-    var cdtemail = document.getElementById("cdtemail").value.trim();
-    var cdtsenha = document.getElementById("cdtsenha").value.trim();
-
-    if (cdtnome === "") {
-        alert("Por favor, preencha o campo Nome.");
-        return false;
-    }
-    else if (cdtemail === "") {
-        alert("Por favor, preencha o campo email.");
-        return false;
-    }
-    else if (cdtsenha === "") {
-        alert("Por favor, preencha o campo senha.");
-        return false;
-    }
-}
-
 function realizarLogin() {
     var lgnome = document.getElementById("lgnome").value.trim();
     var lgemail = document.getElementById("lgemail").value.trim();
@@ -60,48 +41,80 @@ function realizarLogin() {
     document.body.classList.add("modal-open");
 }
 
-function nameValidate() {
-    var nomeInput = document.getElementById("cdtnome");
-    var nomeSpan = document.querySelector(".span-required");
 
-    if (nomeInput.value.length < 3) {
-        nomeInput.classList.add("input-error");
-        nomeSpan.style.display = "inline";
+function nomeValidate() {
+    const nomeInput = document.getElementById("cdtnome");
+    const nomeValue = nomeInput.value;
+    if (nomeValue.length < 4) {
+        nomeInput.setCustomValidity("O nome deve ter pelo menos 4 caracteres.");
     } else {
-        nomeInput.classList.remove("input-error");
-        nomeSpan.style.display = "none";
+        nomeInput.setCustomValidity("");
     }
 }
 
 function emailValidate() {
-    var emailInput = document.getElementById("cdtemail");
-    var emailSpan = document.querySelector(".span-required-email");
-    var emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-
-    if (!emailRegex.test(emailInput.value)) {
-        emailInput.classList.add("input-error");
-        emailSpan.style.display = "inline";
+    const emailInput = document.getElementById("cdtemail");
+    const emailValue = emailInput.value;
+    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    if (!emailRegex.test(emailValue)) {
+        emailInput.setCustomValidity("Por favor, insira um endereço de email válido.");
     } else {
-        emailInput.classList.remove("input-error");
-        emailSpan.style.display = "none";
+        emailInput.setCustomValidity("");
     }
 }
 
 function senhaValidate() {
-    var senhaInput = document.getElementById("cdtsenha");
-    var senhaSpan = document.querySelector(".span-required-senha");
-    var senha = senhaInput.value;
+    const senhaInput = document.getElementById("cdtsenha");
+    const indicator = document.querySelector('.password-strength-indicator .indicator');
+    const fraco = document.querySelector('.password-strength-indicator .fraco');
+    const medio = document.querySelector('.password-strength-indicator .medio');
+    const forte = document.querySelector('.password-strength-indicator .forte');
+    const text = document.querySelector('.password-strength-indicator .text');
 
-    var hasUpperCase = /[A-Z]/.test(senha);
-    var hasLowerCase = /[a-z]/.test(senha);
-    var hasNumbers = /\d/.test(senha);
-    var hasSpecialChars = /[!@#$%^&*()_+]/.test(senha);
+    const senha = senhaInput.value;
 
-    if (senha.length < 8 || !hasUpperCase || !hasLowerCase || !hasNumbers || !hasSpecialChars) {
-        senhaInput.classList.add("input-error");
-        senhaSpan.style.display = "inline";
+    let regExpFraco = /[a-z]/;
+    let regExpMedio = /\d+/;
+    let regExpForte = /.[!,@,#,$,%,^,&,*,?,_,~,-,()]/;
+
+    let no = 0;
+
+    if (senha.length === 0) {
+        indicator.style.display = "none";
+        text.style.display = "none";
+        return;
+    }
+
+    if (senha.length <= 3 && (senha.match(regExpFraco) || senha.match(regExpMedio) || senha.match(regExpForte))) {
+        no = 1;
+    } else if (senha.length >= 6 && ((senha.match(regExpFraco) && senha.match(regExpMedio)) || (senha.match(regExpMedio) && senha.match(regExpForte)) || (senha.match(regExpFraco) && senha.match(regExpForte)))) {
+        no = 2;
+    } else if (senha.length >= 6 && senha.match(regExpFraco) && senha.match(regExpMedio) && senha.match(regExpForte)) {
+        no = 3;
+    }
+
+    // Defina as cores das barras de força com base na força da senha
+    fraco.style.backgroundColor = no >= 1 ? "#ff4757" : "#000";
+    medio.style.backgroundColor = no >= 2 ? "orange" : "#000";
+    forte.style.backgroundColor = no === 3 ? "#23ad5c" : "#000";
+
+    text.style.display = "block";
+    text.textContent = no === 1 ? "Senha fraca" : (no === 2 ? "Senha média" : "Senha forte");
+    text.className = no === 1 ? "text fraco" : (no === 2 ? "text medio" : "text forte");
+}
+
+function validateCadastro() {
+    const nomeInput = document.getElementById("cdtnome");
+    const emailInput = document.getElementById("cdtemail");
+    const senhaInput = document.getElementById("cdtsenha");
+
+    nomeValidate();
+    emailValidate();
+    senhaValidate();
+
+    if (nomeInput.checkValidity() && emailInput.checkValidity() && senhaInput.checkValidity()) {
+        return true;
     } else {
-        senhaInput.classList.remove("input-error");
-        senhaSpan.style.display = "none";
+        return false;
     }
 }

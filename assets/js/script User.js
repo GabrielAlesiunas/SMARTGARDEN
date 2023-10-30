@@ -31,12 +31,6 @@ document.getElementById('save-profile-button').addEventListener('click', functio
 });
 
 
-document.querySelector('.profile-image-upload-button').addEventListener('click', function (event) {
-    if (event.target !== document.getElementById('profile-image-upload')) {
-        document.getElementById('profile-image-upload').click();
-    }
-});
-
 document.getElementById('profile-image-upload').addEventListener('change', function () {
     document.getElementById('save-profile-button').style.display = 'block';
 });
