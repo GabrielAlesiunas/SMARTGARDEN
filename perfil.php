@@ -101,14 +101,21 @@ mysqli_close($conexao);
             <div class="profile-image-container">
                 <div class="profile-image-wrapper">
                     <img src="<?php echo $caminho_da_imagem_de_perfil; ?>" alt="Imagem de perfil" class="rounded-image">
-                    <label for="profile-image-upload" class="profile-image-upload-button">
-                        <i class="fas fa-camera"></i> Trocar Imagem
-                    </label>
-                    <input type="file" id="profile-image-upload" accept="image/*" style="display: none;">
+
+                    <form id="profile-image-form" action="upload_imagem.php" method="post" enctype="multipart/form-data">
+                        <label for="profile-image-upload" class="profile-image-upload-button">
+                            <i class="fas fa-camera"></i> Trocar Imagem
+                        </label>
+                        <input type="file" name="profile_image" id="profile-image-upload" accept="image/*" style="display: none;">
+                        <button type="button" id="save-profile-button" class="profile-image-upload-button" style="display: none;">
+                            <i class="fas fa-save"></i> Salvar Imagem
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
     </main>
     <script src="assets/js/script User.js"></script>
 </body>
+
 </html>
