@@ -46,8 +46,107 @@ html, body {
     height: 100vh;
 }
 
-.voltarInicio {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+@media screen and (max-width: 1920px) {
+    .profile-image-wrapper {
+        margin-top: -300px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .rounded-image {
+        margin-top: 20px;
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .profile-image-upload-button {
+        position: absolute;
+        bottom: 0px;
+        right: 12px;
+        background-color: #3e6553;
+        color: #fff;
+        padding: 7px 30px;
+        border-radius: 55%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    #perfilUser {
+        margin-top: 60px;
+        text-align: center;
+        align-items: center;
+        font-size: 35px;
+    }
+
+    .nav {
+        height: 100px;
+        width: auto;
+        column-gap: 4rem;
+        font-size: 25px;
+    }
+
+    .nav__list {
+        flex-direction: row;
+        column-gap: 4rem;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    .nav__logo {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: -1px;
+        display: inline-flex;
+        align-items: center;
+        column-gap: 0.5rem;
+        transition: .3s;
+        margin-left: 0px;
+        font-size: 20px;
+    }
+
+    .dropdown {
+        position: absolute;
+        display: inline-block;
+    }
+
+}
+
+@media screen and (max-width: 1440px) {
+    .rounded-image {
+        margin-top: -10px;
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+}    
+
+@media screen and (max-width: 1440px) {
+    .nav__logo {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: -1px;
+        display: inline-flex;
+        align-items: center;
+        column-gap: 0.5rem;
+        transition: .3s;
+        margin-left: 90px;
+    }
+    
+    .nav__list {
+        flex-direction: row;
+        column-gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 425px) {
+    
 }

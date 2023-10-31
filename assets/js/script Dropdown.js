@@ -1,4 +1,4 @@
-    var isUserLoggedIn = <?php echo $is_logged_in ? 'true' : 'false'; ?>;
+  var isUserLoggedIn = <?php echo $is_logged_in ? 'true' : 'false'; ?>;
   
   // Referência ao modal
   var modal = document.getElementById('myModalBV');

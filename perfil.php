@@ -51,7 +51,6 @@ mysqli_close($conexao);
             <a href="index.php" class="nav__logo">
                 <i class="ri-leaf-line nav__logo-icon"></i> SmartGarden
             </a>
-
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
@@ -92,9 +91,13 @@ mysqli_close($conexao);
                     </li>
                 </ul>
             </div>
+            <div class="nav__btns">
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
         </nav>
         <h1 id="perfilUser">Perfil do Usuário</h1>
-        <!-- <a href="index.php"><button class="voltarInicio">Voltar ao Início</button></a> -->
     </header>
     <main>
         <div class="centered-container">
