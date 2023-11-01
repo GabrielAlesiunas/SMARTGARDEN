@@ -186,15 +186,16 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                 <span class="close-button-product" onclick="closeModal()">&times;</span>
                 <h2 class="modalTitulo"></h2>
                 <p class="modalDescricao"></p>
-                <div class="slider">
-                    <div class="buttons left">
+                <div class="buttons left">
                         <button class="arrow-icon" id="prevButton" ><i class="fas fa-chevron-left"></i></button>
                     </div>
+                <div class="slider">
                     <img src="" alt="Imagem" class="slide" id="modalImage">
-                    <div class="buttons right">
+                    
+                </div>
+                <div class="buttons right">
                         <button class="arrow-icon" id="nextButton"><i class="fas fa-chevron-right"></i></button>
                     </div>
-                </div>
                 <p class="modalPreco"></p>
                 <a href='https://www.mercadolivre.com.br' target="_blank"><button class="btnAddCart">Comprar</button></a>
             </div>
@@ -215,21 +216,21 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
 
                     <h3 class="product__title">Irrigador automático</h3>
                     <span class="product__price">R$ 119,90</span>
-                    <button class="btnVerMais" onclick="openModal('Irrigador automático', 'Não damos garantia...', ['/assets/img/produto1.png', '/assets/img/product2.png', '/assets/img/product3.png'], 'R$ 119,90')">Ver Mais</button>
+                    <button class="btnVerMais" onclick="openModal('Irrigador Automático Inteligente com Arduino', 'Transforme o seu jardim em um oásis verdejante e vibrante com o nosso Irrigador Automático Inteligente baseado em Arduino. Este inovador sistema de irrigação é a solução perfeita para manter suas plantas, flores e hortas saudáveis e bem-hidratadas, sem o incômodo de regas manuais.', ['/assets/img/produto1.png', '/assets/img/product2.png', '/assets/img/product3.png'], 'R$ 119,90')">Ver Mais</button>
                 </article>
 
                 <article class="product__card">
                     <img src="assets/img/produto2.png" alt="" class="product__img">
 
-                    <h3 class="product__title">Kit Mini Suculentas com 20 unidades</h3>
+                    <h3 class="product__title">Produto 2</h3>
                     <span class="product__price">R$ 46,00</span>
-                    <button class="btnVerMais" onclick="openModal2('Kit Mini Suculentas com 20 unidades', 'Kit com 20 mudas...', ['/assets/img/produto2.png'], 'R$ 46,00')">Ver Mais</button>
+                    <button class="btnVerMais" onclick="openModal2('Kit Mini Suculentas com 50 unidades', 'Kit com 20 mudas...', ['/assets/img/produto2.png'], 'R$ 46,00')">Ver Mais</button>
                 </article>
 
                 <article class="product__card">
                     <img src="assets/img/produto3.png" alt="" class="product__img">
 
-                    <h3 class="product__title">Orquídea Amarela </h3>
+                    <h3 class="product__title">Produto 3 </h3>
                     <span class="product__price">R$ 39,99</span>
                     <button class="btnVerMais" onclick="openModal2('Kit Mini Suculentas com 20 unidades', 'Kit com 20 mudas...', ['/assets/img/suculenta.png'], 'R$ 46,00')">Ver Mais</button>
                 </article>
@@ -237,25 +238,25 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                 <article class="product__card">
                     <img src="assets/img/produto4.png" alt="" class="product__img">
 
-                    <h3 class="product__title">Terra Vegetal Adubada 2,4kg Composto Orgânico</h3>
+                    <h3 class="product__title">Produto 4</h3>
                     <span class="product__price">R$ 13,50</span>
                     <button class="btnVerMais" onclick="openModal4('Terra Vegetal Adubada 2,4kg Composto Orgânico', 13.50, 'assets/img/terra vegetal.png')">Ver Mais</button>
                 </article>
 
                 <article class="product__card">
-                    <img src="assets/img/fertilizante.png" alt="" class="product__img">
+                    <img src="assets/img/planta1.png" alt="" class="product__img">
 
-                    <h3 class="product__title">Fertilizante Grow Bokashi 3 Kg</h3>
-                    <span class="product__price">R$ 41,67</span>
-                    <button class="btnVerMais" onclick="openModal5('Fertilizante Grow Bokashi 3 Kg', 41.67, 'assets/img/fertilizante.png')">Ver Mais</button>
+                    <h3 class="product__title">Planta da felicidade</h3>
+                    <span class="product__price">R$ 199,90</span>
+                    <button class="btnVerMais" onclick="openModal5('Planta da felicidade', 'R$199.90', 'assets/img/planta1.png')">Ver Mais</button>
                 </article>
 
                 <article class="product__card">
-                    <img src="assets/img/arandelas.png" alt="" class="product__img">
+                    <img src="assets/img/planta2.png" alt="" class="product__img">
 
-                    <h3 class="product__title">Kit 10 Arandelas Vasos De Plástico Suporte Parede Plantas</h3>
-                    <span class="product__price">R$ 24,49</span>
-                    <button class="btnVerMais" onclick="openModal6('Kit 10 Arandelas Vasos De Plástico Suporte Parede Plantas', 24.49, 'assets/img/arandelas.png')">Ver Mais</button>
+                    <h3 class="product__title">Vaso de mato</h3>
+                    <span class="product__price">R$ 29,90</span>
+                    <button class="btnVerMais" onclick="openModal6('Kit 10 Arandelas Vasos De Plástico Suporte Parede Plantas', 29.90, 'assets/img/planta2.png')">Ver Mais</button>
                 </article>
 
             </div>

@@ -112,8 +112,8 @@ body {
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    margin-top: 99px;
-    height: 81%;
+    margin-top: 80px;
+    height: fit-content;
     width: 74%;
     animation-name: modalopen;
     animation-duration: 0.5s;
@@ -150,14 +150,15 @@ body {
     padding: 3px;
     font-size: 30px;
     border-radius: 4px;
+    margin-top: 118px;
   }
 
   .buttons.right {
-    right: -10px;
+    right: 90px;
   }
 
   .buttons.left {
-    left: 8px;
+    left: 100px;
   }
 
   .modalPreco {
@@ -269,16 +270,17 @@ body {
     border: none;
     cursor: pointer;
     padding: 3px;
-    font-size: 30px;
+    font-size: 33px;
     border-radius: 4px;
+    margin-top: 120px;
   }
 
   .buttons.right {
-    right: -10px;
+    right: 20px;
   }
 
   .buttons.left {
-    left: 8px;
+    left: 48px;
   }
 
   .modalPreco {
@@ -468,7 +470,7 @@ body {
     color: black;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
     position: relative;
     z-index: 2;
     justify-content: center;
@@ -476,7 +478,7 @@ body {
     text-align: center;
     margin: 0 auto;
     margin-top: 85px;
-    height: 80%;
+    height: 77%;
     width: 70%;
   }
 
@@ -509,12 +511,17 @@ body {
     border: none;
     cursor: pointer;
     padding: 4px;
-    font-size: 23px;
+    font-size: 27px;
     border-radius: 4px;
+    margin-top: 180px;
   }
 
   .buttons.right {
-    right: -25px;
+    right: 20px;
+  }
+
+  .buttons.left {
+    left: 50px;
   }
 
   .modalPreco {
@@ -601,7 +608,7 @@ body {
     font-size: 36px;
     padding-bottom: 2px;
     font-size: 34px;
-    line-height: 0.5;
+    line-height: 0.8;
     margin: 3px;
   }
 
@@ -627,13 +634,18 @@ body {
   }
 
   .arrow-icon {
-    font-size: 22px;
+    font-size: 27px;
     border-radius: 4px;
     padding: 2px;
+    margin-top: 170px;
   }
 
   .buttons.right {
-    right: -30px;
+    right: 5px;
+  }
+
+  .buttons.left {
+    left: 40px;
   }
 
   .close-button-product {
@@ -702,7 +714,7 @@ body {
     text-align: center;
     margin: 0 auto;
     margin-top: 158px;
-    height: 63%;
+    height: 67%;
     width: 86%;
   }
 
@@ -712,7 +724,7 @@ body {
     font-size: 36px;
     padding-bottom: 0px;
     font-size: 31px;
-    line-height: 0.5;
+    line-height: 0.9;
     margin: 0px;
   }
 
@@ -732,17 +744,23 @@ body {
   .arrow-icon {
     font-size: 23px;
     border-radius: 4px;
+    margin: -4px;
+    margin-top: 255px;
   }
 
   .buttons.right {
-    right: -35px;
+    right: 5px;
+  }
+
+  .buttons.left {
+    left: 40px;
   }
 
   .close-button-product {
     cursor: pointer;
     color: red;
     text-align: right;
-    font-size: 29px;
+    font-size: 37px;
     margin: -13px;
     margin-top: -22px;
   }
@@ -767,6 +785,16 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem 2rem;
   }
+
+  .slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: -2px;
+}
 }
 
 @media screen and (max-width: 375px) {
@@ -796,7 +824,7 @@ body {
     color: black;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
     position: relative;
     z-index: 2;
     justify-content: center;
@@ -804,8 +832,8 @@ body {
     text-align: center;
     margin: 0 auto;
     margin-top: 150px;
-    height: 63%;
-    width: 85%;
+    height: 66%;
+    width: 86%;
   }
 
   .modalTitulo {
@@ -813,7 +841,7 @@ body {
     color: black;
     padding-bottom: 0px;
     font-size: 28px;
-    line-height: 0.5;
+    line-height: 1.0;
     margin: 0px;
   }
 
@@ -826,27 +854,33 @@ body {
 
   img.slide {
     width: 220px;
-    height: 260px;
+    height: 220px;
     border-radius: 15px;
+    margin-top: 5px;
   }
 
   .arrow-icon {
-    font-size: 20px;
+    font-size: 24px;
     border-radius: 4px;
+    margin-top: 300px;
   }
 
   .buttons.right {
-    right: -35px;
+    right: -15px;
+  }
+
+  .buttons.left {
+    left: 24px;
   }
 
   .close-button-product {
     cursor: pointer;
     color: red;
     text-align: right;
-    font-size: 27px;
+    font-size: 39px;
     margin-top: -18px;
-    margin: -16px;
-    margin-top: -20px;
+    margin: -15px;
+    margin-top: -22px;
   }
 
   .btnAddCart {
@@ -903,7 +937,7 @@ body {
     color: black;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
     position: relative;
     z-index: 2;
     justify-content: center;
@@ -911,7 +945,7 @@ body {
     text-align: center;
     margin: 0 auto;
     margin-top: 190px;
-    height: 63%;
+    height: 59%;
     width: 84%;
   }
 
@@ -925,8 +959,8 @@ body {
     font-family: Poppins-Regular;
     color: black;
     padding-bottom: 0px;
-    font-size: 24px;
-    line-height: 0.5;
+    font-size: 22px;
+    line-height: 1.0;
     margin: 0px;
   }
 
@@ -938,27 +972,32 @@ body {
   }
 
   img.slide {
-    width: 220px;
-    height: 260px;
+    width: 200px;
+    height: 200px;
     border-radius: 20px;
+    margin-top: 8px;
   }
 
   .arrow-icon {
     font-size: 20px;
     border-radius: 4px;
+    margin-top: 250px;
   }
 
   .buttons.right {
-    right: -35px;
+    right: -31px;
+  }
+
+  .buttons.left {
+    left: 10px;
   }
 
   .close-button-product {
     cursor: pointer;
     color: red;
     text-align: right;
-    font-size: 23px;
-    margin-top: -18px;
-    margin: -13px;
+    font-size: 35px;
+    margin: -15px;
   }
 
   .btnAddCart {
