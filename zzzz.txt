@@ -4,7 +4,6 @@ Coisas que faltam fazer:
 
 Arrumar as imagens do site;
 Escolher perguntas e respostas melhores para colocar;
-Arrumar os modais dos produtos, carrossel e quando ele abre em determinadas resolução o modal não abre
 Arrumar as validações da cadastro
 Fazer a responsividade da tela do usuário
 

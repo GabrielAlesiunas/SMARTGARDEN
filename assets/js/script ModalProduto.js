@@ -37,7 +37,7 @@ function openModal(titulo, descricao, imagens, preco) {
 }
 
 function openModal2(titulo, descricao, imagens, preco) {
-    var currentImage = 0; // Inicializa a variável local para esta função
+    var currentImage = 0; 
 
     var modal = document.getElementById("myModal");
     modal.style.display = "block";
@@ -54,18 +54,19 @@ function openModal2(titulo, descricao, imagens, preco) {
     function prevSlide() {
         if (currentImage > 0) {
             currentImage--;
-            updateSlide();
         } else {
             currentImage = imagens.length - 1;
-            updateSlide();
         }
+        updateSlide();
     }
-
+    
     function nextSlide() {
         if (currentImage < imagens.length - 1) {
             currentImage++;
-            updateSlide();
+        } else {
+            currentImage = 0;
         }
+        updateSlide();
     }
 
     function updateSlide() {
@@ -74,7 +75,7 @@ function openModal2(titulo, descricao, imagens, preco) {
 }
 
 function openModal3(titulo, descricao, imagens, preco) {
-    var currentImage = 0; // Inicializa a variável local para esta função
+    var currentImage = 0; 
 
     var modal = document.getElementById("myModal");
     modal.style.display = "block";
@@ -91,18 +92,19 @@ function openModal3(titulo, descricao, imagens, preco) {
     function prevSlide() {
         if (currentImage > 0) {
             currentImage--;
-            updateSlide();
         } else {
             currentImage = imagens.length - 1;
-            updateSlide();
         }
+        updateSlide();
     }
-
+    
     function nextSlide() {
         if (currentImage < imagens.length - 1) {
             currentImage++;
-            updateSlide();
+        } else {
+            currentImage = 0;
         }
+        updateSlide();
     }
 
     function updateSlide() {
@@ -111,7 +113,7 @@ function openModal3(titulo, descricao, imagens, preco) {
 }
 
 function openModal4(titulo, descricao, imagens, preco) {
-    var currentImage = 0; // Inicializa a variável local para esta função
+    var currentImage = 0; 
 
     var modal = document.getElementById("myModal");
     modal.style.display = "block";
@@ -128,18 +130,19 @@ function openModal4(titulo, descricao, imagens, preco) {
     function prevSlide() {
         if (currentImage > 0) {
             currentImage--;
-            updateSlide();
         } else {
             currentImage = imagens.length - 1;
-            updateSlide();
         }
+        updateSlide();
     }
-
+    
     function nextSlide() {
         if (currentImage < imagens.length - 1) {
             currentImage++;
-            updateSlide();
+        } else {
+            currentImage = 0;
         }
+        updateSlide();
     }
 
     function updateSlide() {
@@ -148,7 +151,7 @@ function openModal4(titulo, descricao, imagens, preco) {
 }
 
 function openModal5(titulo, descricao, imagens, preco) {
-    var currentImage = 0; // Inicializa a variável local para esta função
+    var currentImage = 0; 
 
     var modal = document.getElementById("myModal");
     modal.style.display = "block";
@@ -165,18 +168,19 @@ function openModal5(titulo, descricao, imagens, preco) {
     function prevSlide() {
         if (currentImage > 0) {
             currentImage--;
-            updateSlide();
         } else {
             currentImage = imagens.length - 1;
-            updateSlide();
         }
+        updateSlide();
     }
-
+    
     function nextSlide() {
         if (currentImage < imagens.length - 1) {
             currentImage++;
-            updateSlide();
+        } else {
+            currentImage = 0;
         }
+        updateSlide();
     }
 
     function updateSlide() {
@@ -185,7 +189,7 @@ function openModal5(titulo, descricao, imagens, preco) {
 }
 
 function openModal6(titulo, descricao, imagens, preco) {
-    var currentImage = 0;
+    var currentImage = 0; 
 
     var modal = document.getElementById("myModal");
     modal.style.display = "block";
@@ -202,25 +206,25 @@ function openModal6(titulo, descricao, imagens, preco) {
     function prevSlide() {
         if (currentImage > 0) {
             currentImage--;
-            updateSlide();
         } else {
             currentImage = imagens.length - 1;
-            updateSlide();
         }
+        updateSlide();
     }
-
+    
     function nextSlide() {
         if (currentImage < imagens.length - 1) {
             currentImage++;
-            updateSlide();
+        } else {
+            currentImage = 0;
         }
+        updateSlide();
     }
 
     function updateSlide() {
         modal.querySelector("#modalImage").src = imagens[currentImage];
     }
 }
-
 
 function closeModal() {
   var modal = document.getElementById("myModal");
@@ -238,8 +242,8 @@ var productData1 = {
   preco: "R$ 119,90",
 };
 var productData2 = {
-  titulo: "Kit Mini Suculentas com 20 unidades",
-  descricao: "Kit com 20 mudas...",
+  titulo: "Produto 2",
+  descricao: "Descrição 2",
   imagens: [
     "/assets/img/produto2.png",
     "/assets/img/product2.png",
@@ -248,8 +252,8 @@ var productData2 = {
   preco: "R$ 46,00",
 };
 var productData3 = {
-    titulo: "Kit Mini Suculentas com 20 unidades",
-    descricao: "Kit com 20 mudas...",
+    titulo: "Produto3",
+    descricao: "Descrição 3",
     imagens: [
       "/assets/img/produto3.png",
       "/assets/img/product2.png",
@@ -258,14 +262,14 @@ var productData3 = {
     preco: "R$ 46,00",
 };
 var productData4 = {
-    titulo: "Kit Mini Suculentas com 20 unidades",
-    descricao: "Kit com 20 mudas...",
+    titulo: "Produto 4",
+    descricao: "Descrição 4",
     imagens: [
-      "/assets/img/produto3.png",
+      "/assets/img/produto4.png",
       "/assets/img/product2.png",
       "/assets/img/product3.png",
     ],
-    preco: "R$ 46,00",
+    preco: "R$ 13,50",
 };
 var productData5 = {
     titulo: "Planta da felicidade",
@@ -275,10 +279,10 @@ var productData5 = {
       "/assets/img/product2.png",
       "/assets/img/product3.png",
     ],
-    preco: "R$ 46,00",
+    preco: "R$ 199,90",
 };
 var productData6 = {
-    titulo: "Hortaliças",
+    titulo: "Vaso de mato",
     descricao: "Hortaliças",
     imagens: [
       "/assets/img/planta2.png",

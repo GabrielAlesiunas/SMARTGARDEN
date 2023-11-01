@@ -171,7 +171,7 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                         </p>
                     </div>
 
-                    <a href="#" class="button--link button--flex">
+                    <a href="#products" class="button--link button--flex">
                         Compre agora <i class="ri-arrow-right-down-line button__icon"></i>
                     </a>
                 </div>
@@ -211,6 +211,7 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
             </p>
 
             <div class="product__container grid">
+                <!-- PRODUTO 1 -->
                 <article class="product__card">
                     <img src="assets/img/produto1.png" alt="" class="product__img">
 
@@ -218,45 +219,45 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                     <span class="product__price">R$ 119,90</span>
                     <button class="btnVerMais" onclick="openModal('Irrigador Automático Inteligente com Arduino', 'Transforme o seu jardim em um oásis verdejante e vibrante com o nosso Irrigador Automático Inteligente baseado em Arduino. Este inovador sistema de irrigação é a solução perfeita para manter suas plantas, flores e hortas saudáveis e bem-hidratadas, sem o incômodo de regas manuais.', ['/assets/img/produto1.png', '/assets/img/product2.png', '/assets/img/product3.png'], 'R$ 119,90')">Ver Mais</button>
                 </article>
-
+                <!-- PRODUTO 2 -->
                 <article class="product__card">
                     <img src="assets/img/produto2.png" alt="" class="product__img">
 
                     <h3 class="product__title">Produto 2</h3>
                     <span class="product__price">R$ 46,00</span>
-                    <button class="btnVerMais" onclick="openModal2('Kit Mini Suculentas com 50 unidades', 'Kit com 20 mudas...', ['/assets/img/produto2.png'], 'R$ 46,00')">Ver Mais</button>
+                    <button class="btnVerMais" onclick="openModal2('Produto 2', 'Descrição 2', ['/assets/img/produto2.png', '/assets/img/product2.png', '/assets/img/product3.png'], 'R$ 46,00')">Ver Mais</button>
                 </article>
-
+                <!-- PRODUTO 3 -->
                 <article class="product__card">
                     <img src="assets/img/produto3.png" alt="" class="product__img">
 
                     <h3 class="product__title">Produto 3 </h3>
                     <span class="product__price">R$ 39,99</span>
-                    <button class="btnVerMais" onclick="openModal2('Kit Mini Suculentas com 20 unidades', 'Kit com 20 mudas...', ['/assets/img/suculenta.png'], 'R$ 46,00')">Ver Mais</button>
+                    <button class="btnVerMais" onclick="openModal3('Produto 3', 'Descrição 3', ['/assets/img/produto3.png', '/assets/img/product2.png', '/assets/img/product3.png'], 'R$ 39,99')">Ver Mais</button>
                 </article>
-
+                <!-- PRODUTO 4 -->
                 <article class="product__card">
                     <img src="assets/img/produto4.png" alt="" class="product__img">
 
                     <h3 class="product__title">Produto 4</h3>
                     <span class="product__price">R$ 13,50</span>
-                    <button class="btnVerMais" onclick="openModal4('Terra Vegetal Adubada 2,4kg Composto Orgânico', 13.50, 'assets/img/terra vegetal.png')">Ver Mais</button>
+                    <button class="btnVerMais" onclick="openModal4('Produto 4', 'Descrição 4', ['/assets/img/produto4.png', '/assets/img/product2.png', '/assets/img/product3.png'], 'R$ 13,50')">Ver Mais</button>
                 </article>
-
+                <!-- PRODUTO 5 -->
                 <article class="product__card">
                     <img src="assets/img/planta1.png" alt="" class="product__img">
 
                     <h3 class="product__title">Planta da felicidade</h3>
                     <span class="product__price">R$ 199,90</span>
-                    <button class="btnVerMais" onclick="openModal5('Planta da felicidade', 'R$199.90', 'assets/img/planta1.png')">Ver Mais</button>
+                    <button class="btnVerMais" onclick="openModal5('Planta da felicidade', 'Use para ficar relaxado e tranquilo', ['/assets/img/produto2.png', '/assets/img/product2.png', '/assets/img/product3.png'], 'R$ 199,90')">Ver Mais</button>
                 </article>
-
+                <!-- PRODUTO 6 -->
                 <article class="product__card">
                     <img src="assets/img/planta2.png" alt="" class="product__img">
 
                     <h3 class="product__title">Vaso de mato</h3>
                     <span class="product__price">R$ 29,90</span>
-                    <button class="btnVerMais" onclick="openModal6('Kit 10 Arandelas Vasos De Plástico Suporte Parede Plantas', 29.90, 'assets/img/planta2.png')">Ver Mais</button>
+                    <button class="btnVerMais" onclick="openModal6('Vaso de mato', 'Hortaliças', ['/assets/img/planta2.png', '/assets/img/product2.png', '/assets/img/product3.png'], 'R$ 29,90')">Ver Mais</button>
                 </article>
 
             </div>
