@@ -235,12 +235,13 @@ var productData1 = {
   titulo: "Irrigador Automático Inteligente com Arduino",
   descricao: "Transforme o seu jardim em um oásis verdejante e vibrante com o nosso Irrigador Automático Inteligente baseado em Arduino. Este inovador sistema de irrigação é a solução perfeita para manter suas plantas, flores e hortas saudáveis e bem-hidratadas, sem o incômodo de regas manuais.",
   imagens: [
-    "/assets/img/produto1.png",
-    "/assets/img/product2.png",
-    "/assets/img/product3.png",
+    "/assets/img/produto1/arduino.png",
+    "/assets/img/produto1/cabos.png",
+    "/assets/img/produto1/caixa.png",
   ],
   preco: "R$ 119,90",
 };
+
 var productData2 = {
   titulo: "Produto 2",
   descricao: "Descrição 2",
@@ -251,6 +252,7 @@ var productData2 = {
   ],
   preco: "R$ 46,00",
 };
+
 var productData3 = {
     titulo: "Produto3",
     descricao: "Descrição 3",
@@ -261,33 +263,36 @@ var productData3 = {
     ],
     preco: "R$ 46,00",
 };
+
 var productData4 = {
-    titulo: "Produto 4",
-    descricao: "Descrição 4",
+    titulo: "Bertalha Roxa",
+    descricao: "Bem-vindo ao mundo da Bertalha Roxa, uma planta fascinante que combina beleza e sabor em uma única experiência de cultivo. Esta variedade de bertalha não apenas encanta com suas folhas roxas vibrantes, mas também oferece um sabor suave e terroso que adiciona um toque especial às suas refeições.",
     imagens: [
-      "/assets/img/produto4.png",
-      "/assets/img/product2.png",
-      "/assets/img/product3.png",
+      "/assets/img/produto4/frente.png",
+      "/assets/img/produto4/cima.png",
+      "/assets/img/produto4/info.png",
     ],
     preco: "R$ 13,50",
 };
+
 var productData5 = {
-    titulo: "Planta da felicidade",
-    descricao: "Use para ficar relaxado e tranquilo",
+    titulo: "Hortelã",
+    descricao: "Desperte seu jardineiro interior com o nosso elegante Vaso de Hortelã Fresca. Este pequeno jardim em casa é a maneira perfeita de cultivar hortelã orgânica e fresca em sua cozinha, varanda ou jardim. A hortelã é uma erva aromática versátil que adiciona um toque de frescor a uma variedade de pratos, desde saladas até coquetéis.",
     imagens: [
-      "/assets/img/planta1.png",
-      "/assets/img/product2.png",
-      "/assets/img/product3.png",
+      "/assets/img/produto5/hortela.png",
+      "/assets/img/produto5/hortela2.png",
+      "/assets/img/produto5/info.png",
     ],
-    preco: "R$ 199,90",
+    preco: "R$ 19,90",
 };
+
 var productData6 = {
-    titulo: "Vaso de mato",
-    descricao: "Hortaliças",
+    titulo: "Menta",
+    descricao: "Bem-vindo à nossa seleção de Menta Fresca, um ingrediente versátil que pode transformar suas receitas e momentos de relaxamento. A menta é conhecida por seu sabor refrescante e aroma revigorante, tornando-a um complemento perfeito para sua cozinha, chás, coquetéis e cuidados pessoais.",
     imagens: [
-      "/assets/img/planta2.png",
-      "/assets/img/product2.png",
-      "/assets/img/product3.png",
+      "/assets/img/produto6/menta1.png",
+      "/assets/img/produto6/menta2.png",
+      "/assets/img/produto6/info.png",
     ],
     preco: "R$ 29,90",
 };

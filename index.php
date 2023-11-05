@@ -213,51 +213,50 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
             <div class="product__container grid">
                 <!-- PRODUTO 1 -->
                 <article class="product__card">
-                    <img src="assets/img/produto1.png" alt="" class="product__img">
-
+                    <img src="assets/img/produto1/arduino.png" alt="" class="product__img">
                     <h3 class="product__title">Irrigador automático</h3>
                     <span class="product__price">R$ 119,90</span>
-                    <button class="btnVerMais" onclick="openModal('Irrigador Automático Inteligente com Arduino', 'Transforme o seu jardim em um oásis verdejante e vibrante com o nosso Irrigador Automático Inteligente baseado em Arduino. Este inovador sistema de irrigação é a solução perfeita para manter suas plantas, flores e hortas saudáveis e bem-hidratadas, sem o incômodo de regas manuais.', ['/assets/img/produto1.png', '/assets/img/product2.png', '/assets/img/product3.png'], 'R$ 119,90')">Ver Mais</button>
+                    <button class="btnVerMais" onclick="openModal('Irrigador Automático Inteligente com Arduino', 'Transforme o seu jardim em um oásis verdejante e vibrante com o nosso Irrigador Automático Inteligente baseado em Arduino. Este inovador sistema de irrigação é a solução perfeita para manter suas plantas, flores e hortas saudáveis e bem-hidratadas, sem o incômodo de regas manuais.', ['/assets/img/produto1/arduino.png', '/assets/img/produto1/cabos.png', '/assets/img/produto1/caixa.png'], 'R$ 119,90')">Ver Mais</button>
                 </article>
+
                 <!-- PRODUTO 2 -->
                 <article class="product__card">
                     <img src="assets/img/produto2.png" alt="" class="product__img">
-
                     <h3 class="product__title">Produto 2</h3>
                     <span class="product__price">R$ 46,00</span>
                     <button class="btnVerMais" onclick="openModal2('Produto 2', 'Descrição 2', ['/assets/img/produto2.png', '/assets/img/product2.png', '/assets/img/product3.png'], 'R$ 46,00')">Ver Mais</button>
                 </article>
+
                 <!-- PRODUTO 3 -->
                 <article class="product__card">
                     <img src="assets/img/produto3.png" alt="" class="product__img">
-
                     <h3 class="product__title">Produto 3 </h3>
                     <span class="product__price">R$ 39,99</span>
                     <button class="btnVerMais" onclick="openModal3('Produto 3', 'Descrição 3', ['/assets/img/produto3.png', '/assets/img/product2.png', '/assets/img/product3.png'], 'R$ 39,99')">Ver Mais</button>
                 </article>
-                <!-- PRODUTO 4 -->
-                <article class="product__card">
-                    <img src="assets/img/produto4.png" alt="" class="product__img">
 
-                    <h3 class="product__title">Produto 4</h3>
-                    <span class="product__price">R$ 13,50</span>
-                    <button class="btnVerMais" onclick="openModal4('Produto 4', 'Descrição 4', ['/assets/img/produto4.png', '/assets/img/product2.png', '/assets/img/product3.png'], 'R$ 13,50')">Ver Mais</button>
-                </article>
                 <!-- PRODUTO 5 -->
                 <article class="product__card">
-                    <img src="assets/img/planta1.png" alt="" class="product__img">
-
-                    <h3 class="product__title">Planta da felicidade</h3>
-                    <span class="product__price">R$ 199,90</span>
-                    <button class="btnVerMais" onclick="openModal5('Planta da felicidade', 'Use para ficar relaxado e tranquilo', ['/assets/img/produto2.png', '/assets/img/product2.png', '/assets/img/product3.png'], 'R$ 199,90')">Ver Mais</button>
+                    <img src="assets/img/produto5/hortela.png" alt="" class="product__img">
+                    <h3 class="product__title">Hortelã</h3>
+                    <span class="product__price">R$ 19,90</span>
+                    <button class="btnVerMais" onclick="openModal5('Hortelã', 'Desperte seu jardineiro interior com o nosso elegante Vaso de Hortelã Fresca. Este pequeno jardim em casa é a maneira perfeita de cultivar hortelã orgânica e fresca em sua cozinha, varanda ou jardim. A hortelã é uma erva aromática versátil que adiciona um toque de frescor a uma variedade de pratos, desde saladas até coquetéis.', ['/assets/img/produto5/hortela.png', '/assets/img/produto5/hortela2.png', '/assets/img/produto5/info.png'], 'R$ 19,90')">Ver Mais</button>
                 </article>
+
+                <!-- PRODUTO 4 -->
+                <article class="product__card">
+                    <img src="assets/img/produto4/frente.png" alt="" class="product__img">
+                    <h3 class="product__title">Bertalha Roxa</h3>
+                    <span class="product__price">R$ 13,50</span>
+                    <button class="btnVerMais" onclick="openModal4('Bertalha Roxa', 'Bem-vindo ao mundo da Bertalha Roxa, uma planta fascinante que combina beleza e sabor em uma única experiência de cultivo. Esta variedade de bertalha não apenas encanta com suas folhas roxas vibrantes, mas também oferece um sabor suave e terroso que adiciona um toque especial às suas refeições.', ['/assets/img/produto4/frente.png', '/assets/img/produto4/cima.png', '/assets/img/produto4/info.png'], 'R$ 13,50')">Ver Mais</button>
+                </article>
+
                 <!-- PRODUTO 6 -->
                 <article class="product__card">
-                    <img src="assets/img/planta2.png" alt="" class="product__img">
-
-                    <h3 class="product__title">Vaso de mato</h3>
+                    <img src="assets/img/produto6/menta1.png" alt="" class="product__img">
+                    <h3 class="product__title">Menta</h3>
                     <span class="product__price">R$ 29,90</span>
-                    <button class="btnVerMais" onclick="openModal6('Vaso de mato', 'Hortaliças', ['/assets/img/planta2.png', '/assets/img/product2.png', '/assets/img/product3.png'], 'R$ 29,90')">Ver Mais</button>
+                    <button class="btnVerMais" onclick="openModal6('Menta', 'Bem-vindo à nossa seleção de Menta Fresca, um ingrediente versátil que pode transformar suas receitas e momentos de relaxamento. A menta é conhecida por seu sabor refrescante e aroma revigorante, tornando-a um complemento perfeito para sua cozinha, chás, coquetéis e cuidados pessoais.', ['/assets/img/produto6/menta1.png', ' assets/img/produto6/menta2.png', 'assets/img/produto6/info.png'], 'R$ 29,90')">Ver Mais</button>
                 </article>
 
             </div>

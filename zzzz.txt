@@ -2,10 +2,10 @@ VERSÃO PHP: 8.1.13
 
 Coisas que faltam fazer:
 
-Arrumar as imagens do site;
 Escolher perguntas e respostas melhores para colocar;
 Arrumar as validações da cadastro
 Fazer a responsividade da tela do usuário
+Arrumar o menu da tela User
 
 
 git config --global user.name "Gabriel Raimundo"

@@ -63,44 +63,25 @@ function emailValidate() {
     }
 }
 
-function senhaValidate() {
-    const senhaInput = document.getElementById("cdtsenha");
-    const indicator = document.querySelector('.password-strength-indicator .indicator');
-    const fraco = document.querySelector('.password-strength-indicator .fraco');
-    const medio = document.querySelector('.password-strength-indicator .medio');
-    const forte = document.querySelector('.password-strength-indicator .forte');
-    const text = document.querySelector('.password-strength-indicator .text');
+function verificaForcaSenha() 
+{
+	var numeros = /([0-9])/;
+	var alfabetoa = /([a-z])/;
+	var alfabetoA = /([A-Z])/;
+	var chEspeciais = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
 
-    const senha = senhaInput.value;
 
-    let regExpFraco = /[a-z]/;
-    let regExpMedio = /\d+/;
-    let regExpForte = /.[!,@,#,$,%,^,&,*,?,_,~,-,()]/;
-
-    let no = 0;
-
-    if (senha.length === 0) {
-        indicator.style.display = "none";
-        text.style.display = "none";
-        return;
-    }
-
-    if (senha.length <= 3 && (senha.match(regExpFraco) || senha.match(regExpMedio) || senha.match(regExpForte))) {
-        no = 1;
-    } else if (senha.length >= 6 && ((senha.match(regExpFraco) && senha.match(regExpMedio)) || (senha.match(regExpMedio) && senha.match(regExpForte)) || (senha.match(regExpFraco) && senha.match(regExpForte)))) {
-        no = 2;
-    } else if (senha.length >= 6 && senha.match(regExpFraco) && senha.match(regExpMedio) && senha.match(regExpForte)) {
-        no = 3;
-    }
-
-    // Defina as cores das barras de força com base na força da senha
-    fraco.style.backgroundColor = no >= 1 ? "#ff4757" : "#000";
-    medio.style.backgroundColor = no >= 2 ? "orange" : "#000";
-    forte.style.backgroundColor = no === 3 ? "#23ad5c" : "#000";
-
-    text.style.display = "block";
-    text.textContent = no === 1 ? "Senha fraca" : (no === 2 ? "Senha média" : "Senha forte");
-    text.className = no === 1 ? "text fraco" : (no === 2 ? "text medio" : "text forte");
+	if($('#cdtsenha').val().length<6) 
+	{
+		$('#password-status').html("<span style='color:red'>Fraco, insira no mínimo 6 caracteres</span>");
+	} else {  	
+		if ($('#cdtsenha').val().match(numeros) && $('#cdtsenha').val().match(alfabetoa) && $('#cdtsenha').val().match(alfabetoA) && $('#cdtsenha').val().match(chEspeciais))
+		{            
+			$('#password-status').html("<span style='color:green'><b>Forte</b></span>");
+		} else {
+			$('#password-status').html("<span style='color:orange'>Médio</span>");
+		}
+	}
 }
 
 function validateCadastro() {
