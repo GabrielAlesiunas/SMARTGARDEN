@@ -41,40 +41,21 @@ mysqli_close($conexao);
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="assets/js/script Dropdown.js"></script>
-    <title>Perfil do Usuário</title>
 </head>
 
 <body>
-    <header class="header" id="header">
+<header class="header" id="header">
         <nav class="nav container">
             <a href="index.php" class="nav__logo">
                 <i class="ri-leaf-line nav__logo-icon"></i> SmartGarden
             </a>
+
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="index.php" class="nav__link">Home</a>
+                        <a href="/index.php" class="nav__link active-link">Home</a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">Sobre</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#products" class="nav__link">Produtos</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#faqs" class="nav__link">FAQs</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">Contato</a>
-                    </li>
-
-                    <li class="nav__item">
-                        <?php if (!isset($_SESSION['username'])) : ?>
-                            <button class="nav__link" id="loginButton" onclick="abrirModalLogin()">
-                                <i class="fas fa-user"></i> Minha Conta
-                            </button>
-                        <?php endif; ?>
-                    </li>
+                   
                     <li class="nav__item">
                         <?php if (isset($_SESSION['username'])) : ?>
                             <div class="dropdown">
@@ -82,7 +63,6 @@ mysqli_close($conexao);
                                     <?php echo $username; ?> <i class="fas fa-caret-down"></i>
                                 </a>
                                 <div class="dropdown-content" id="dropdownContent">
-                                    <a href="perfil.php" id="perfilLink">Perfil</a>
                                     <a href="logout.php" id="logoutLink">Logout</a>
                                 </div>
                             </div>
@@ -90,15 +70,19 @@ mysqli_close($conexao);
                     </li>
                 </ul>
             </div>
+
             <div class="nav__btns">
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-menu-line"></i>
                 </div>
             </div>
         </nav>
-        <h1 id="perfilUser">Perfil do Usuário</h1>
     </header>
+
     <main>
+    <h1 id="perfilUser">Perfil do Usuário</h1>
         <div class="centered-container">
             <div class="profile-image-container">
                 <div class="profile-image-wrapper">
