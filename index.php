@@ -240,7 +240,7 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                     <img src="assets/img/produto5/hortela.png" alt="" class="product__img">
                     <h3 class="product__title">Hortelã</h3>
                     <span class="product__price">R$ 19,90</span>
-                    <button class="btnVerMais" onclick="openModal5('Hortelã', 'Desperte seu jardineiro interior com o nosso elegante Vaso de Hortelã Fresca. Este pequeno jardim em casa é a maneira perfeita de cultivar hortelã orgânica e fresca em sua cozinha, varanda ou jardim. A hortelã é uma erva aromática versátil que adiciona um toque de frescor a uma variedade de pratos, desde saladas até coquetéis.', ['/assets/img/produto5/hortela.png', '/assets/img/produto5/hortela2.png', '/assets/img/produto5/info.png'], 'R$ 19,90')">Ver Mais</button>
+                    <button class="btnVerMais" onclick="openModal5('Hortelã', 'Desperte seu jardineiro interior com o nosso elegante Vaso de Hortelã Fresca. Este pequeno jardim em casa é a maneira perfeita de cultivar hortelã orgânica e fresca em sua cozinha, varanda ou jardim. A hortelã é uma erva aromática versátil que adiciona um toque de frescor a uma variedade de pratos, desde saladas até coquetéis.', ['/assets/img/produto5/hortela.png', '/assets/img/produto5/hortela2.png', '/assets/img/produto5/info hortela.jpg'], 'R$ 19,90')">Ver Mais</button>
                 </article>
 
                 <!-- PRODUTO 4 -->
@@ -248,7 +248,7 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                     <img src="assets/img/produto4/frente.png" alt="" class="product__img">
                     <h3 class="product__title">Bertalha Roxa</h3>
                     <span class="product__price">R$ 13,50</span>
-                    <button class="btnVerMais" onclick="openModal4('Bertalha Roxa', 'Bem-vindo ao mundo da Bertalha Roxa, uma planta fascinante que combina beleza e sabor em uma única experiência de cultivo. Esta variedade de bertalha não apenas encanta com suas folhas roxas vibrantes, mas também oferece um sabor suave e terroso que adiciona um toque especial às suas refeições.', ['/assets/img/produto4/frente.png', '/assets/img/produto4/cima.png', '/assets/img/produto4/info.png'], 'R$ 13,50')">Ver Mais</button>
+                    <button class="btnVerMais" onclick="openModal4('Bertalha Roxa', 'Bem-vindo ao mundo da Bertalha Roxa, uma planta fascinante que combina beleza e sabor em uma única experiência de cultivo. Esta variedade de bertalha não apenas encanta com suas folhas roxas vibrantes, mas também oferece um sabor suave e terroso que adiciona um toque especial às suas refeições.', ['/assets/img/produto4/frente.png', '/assets/img/produto4/cima.png', '/assets/img/produto4/info bertalha.jpg'], 'R$ 13,50')">Ver Mais</button>
                 </article>
 
                 <!-- PRODUTO 6 -->
@@ -256,7 +256,7 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                     <img src="assets/img/produto6/menta1.png" alt="" class="product__img">
                     <h3 class="product__title">Menta</h3>
                     <span class="product__price">R$ 29,90</span>
-                    <button class="btnVerMais" onclick="openModal6('Menta', 'Bem-vindo à nossa seleção de Menta Fresca, um ingrediente versátil que pode transformar suas receitas e momentos de relaxamento. A menta é conhecida por seu sabor refrescante e aroma revigorante, tornando-a um complemento perfeito para sua cozinha, chás, coquetéis e cuidados pessoais.', ['/assets/img/produto6/menta1.png', ' assets/img/produto6/menta2.png', 'assets/img/produto6/info.png'], 'R$ 29,90')">Ver Mais</button>
+                    <button class="btnVerMais" onclick="openModal6('Menta', 'Bem-vindo à nossa seleção de Menta Fresca, um ingrediente versátil que pode transformar suas receitas e momentos de relaxamento. A menta é conhecida por seu sabor refrescante e aroma revigorante, tornando-a um complemento perfeito para sua cozinha, chás, coquetéis e cuidados pessoais.', ['/assets/img/produto6/menta1.png', ' assets/img/produto6/menta2.png', 'assets/img/produto6/info menta.jpg'], 'R$ 29,90')">Ver Mais</button>
                 </article>
 
             </div>
@@ -274,14 +274,13 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
                             <h3 class="questions__item-title">
-                                Como escolher a planta ideal para mim?
+                                Como funciona um irrigador controlado por Arduino?
                             </h3>
                         </header>
 
                         <div class="questions__content">
                             <p class="questions__description">
-                                A planta certa para você pode variar de acordo com o local que você deseja coloca-la.
-                                Lugares com menos claridade precisa de um tipo determinado de planta, para lugares com mais claridade serão necessárias outras plantas. Entre outros fatores
+                                Um irrigador controlado por Arduino é um dispositivo que utiliza um microcontrolador Arduino para automatizar o processo de irrigação, permitindo que você programe horários e durações de irrigação de acordo com as necessidades das plantas.
                             </p>
                         </div>
                     </div>
@@ -290,14 +289,13 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
                             <h3 class="questions__item-title">
-                                Quantas vezes por dia devo regar minhas plantas?
+                                Quais são os benefícios de usar um irrigador controlado por Arduino?
                             </h3>
                         </header>
 
                         <div class="questions__content">
                             <p class="questions__description">
-                                Cada planta exige quantidades específicas, mas uma regra que não costuma falhar é evitar encharcar a terra (sempre existem exceções).
-                                O excesso de água “afoga” as raízes, que carecem de ar e aumenta o surgimento de doenças e de fungos.
+                                Os benefícios incluem economia de água, maior eficiência na irrigação, automação e controle remoto das operações de irrigação, e a capacidade de ajustar as configurações com base em dados climáticos em tempo real.
                             </p>
                         </div>
                     </div>
@@ -306,14 +304,13 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
                             <h3 class="questions__item-title">
-                                Como combater as “pragas”?
+                                Posso controlar o irrigador usando meu smartphone?
                             </h3>
                         </header>
 
                         <div class="questions__content">
                             <p class="questions__description">
-                                Em um ambiente equilibrado não existem “pragas”. Para isso é importante manter uma certa diversidade de plantas, inclusive as invasoras, ou seja, aquelas que não foram cultivadas por você, mas apareceram na sua horta.
-                                Retire apenas as que estão ameaçando o desenvolvimento do cultivo. Quanto mais cheio de diversidade for o seu solo, maiores as chances da sua horta abrigar alguns inimigos naturais das “pragas”.
+                                Sim, nossos irrigadores controlados por Arduino têm a capacidade de serem controlados remotamente por meio do aplicativo para smartphone.
                             </p>
                         </div>
                     </div>
@@ -324,14 +321,13 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
                             <h3 class="questions__item-title">
-                                Por que devo usar irrigador automatizado?
+                                É difícil configurar um irrigador controlado por Arduino?
                             </h3>
                         </header>
 
                         <div class="questions__content">
                             <p class="questions__description">
-                                Para garantir um jardim saudável é necessário fazer uso da irrigação. A
-                                irrigação automatizada é o uso da tecnologia para fornecer água na medida certa, evitando que as plantas fiquem reféns da água da chuva ou dependam dos cuidados humanos.
+                                Não, nossos irrigadores controlados por Arduino ja vem com uma pré configuração para cada tipo de planta.
                             </p>
                         </div>
                     </div>
@@ -340,13 +336,13 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
                             <h3 class="questions__item-title">
-                                Existe alguma planta que é mais segura para quem tem bicho de estimação?
+                                Posso programar múltiplos horários de irrigação com um único irrigador controlado por Arduino?
                             </h3>
                         </header>
 
                         <div class="questions__content">
                             <p class="questions__description">
-                                Plantas sem espinhos, com folhas curtas e de preferência pequenas
+                                Sim, nossos irrigadores controlados por Arduino permite que você programe múltiplos horários de irrigação para atender às necessidades específicas das suas plantas.
                             </p>
                         </div>
                     </div>
@@ -355,13 +351,13 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
                             <h3 class="questions__item-title">
-                                Quais as vantagens de utilizar irrigador automático?
+                                O que devo fazer se tiver problemas com o meu irrigador Arduino?
                             </h3>
                         </header>
 
                         <div class="questions__content">
                             <p class="questions__description">
-                                Ele irá gerar uma economia para seu bolso e garantir que você tenha seus jardins verdes e bonitos em qualquer estação do ano.
+                                Entre em contato com nosso suporte ao cliente para obter assistência. Eles estarão prontos para ajudá-lo a solucionar quaisquer problemas ou dúvidas que você possa ter.
                             </p>
                         </div>
                     </div>

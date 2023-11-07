@@ -51,8 +51,13 @@
   height: 100vh;
 }
 
+@media screen and (max-width: 1920px) {
+  #perfilUser {
+    margin-top: 150px;
+    text-align: center;
+    align-items: center;
+  }
 
-@media screen and (max-width: 320px) {
   .profile-image-wrapper {
     margin-top: 80px;
     position: relative;
@@ -61,11 +66,11 @@
 
   .profile-image-upload-button {
     position: absolute;
-    bottom: 152px;
-    right: 25px;
+    bottom: 255px;
+    right: 21px;
     background-color: #3e6553;
     color: #fff;
-    padding: 6px 17px;
+    padding: 8px 30px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -74,72 +79,21 @@
 
   .rounded-image {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     object-fit: cover;
-    margin-top: -360px;
+    margin-top: -480px;
+  }
+
+  .nav__link {
+    color: var(--title-color);
+    font-weight: 500;
+    transition: .3s;
+    font-size: 22px;
   }
 }
 
-@media screen and (max-width: 375px) {
-  .profile-image-wrapper {
-    margin-top: 80px;
-    position: relative;
-    display: inline-block;
-  }
-
-  .profile-image-upload-button {
-    position: absolute;
-    bottom: 152px;
-    right: 25px;
-    background-color: #3e6553;
-    color: #fff;
-    padding: 6px 17px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-  }
-
-  .rounded-image {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin-top: -360px;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .profile-image-wrapper {
-    margin-top: 80px;
-    position: relative;
-    display: inline-block;
-  }
-
-  .profile-image-upload-button {
-    position: absolute;
-    bottom: 152px;
-    right: 25px;
-    background-color: #3e6553;
-    color: #fff;
-    padding: 6px 17px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-  }
-
-  .rounded-image {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin-top: -360px;
-  }
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1440px) {
   #perfilUser {
     margin-top: 100px;
     text-align: center;
@@ -171,6 +125,48 @@
     height: 220px;
     object-fit: cover;
     margin-top: -360px;
+  }
+
+  .nav__link {
+    color: var(--title-color);
+    font-weight: 500;
+    transition: .3s;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  #perfilUser {
+    margin-top: 120px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .profile-image-wrapper {
+    margin-top: -50px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .profile-image-upload-button {
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    background-color: #3e6553;
+    color: #fff;
+    padding: 4px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .rounded-image {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-top: -200px;
   }
 
   .nav__link {
@@ -247,7 +243,7 @@
   }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 768px) {
   #perfilUser {
     margin-top: 100px;
     text-align: center;
@@ -283,19 +279,25 @@
 
   .nav__link {
     color: var(--title-color);
-    font-weight: 500;
+    font-weight: var(--font-medium);
     transition: .3s;
-    font-size: 22px;
+    font-size: 18px;
+  }
+
+  .nav__logo {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: -1px;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    transition: .3s;
+    margin-left: 20px;
+    font-size: 18px;
   }
 }
 
-@media screen and (max-width: 1920px) {
-  #perfilUser {
-    margin-top: 150px;
-    text-align: center;
-    align-items: center;
-  }
-
+@media screen and (max-width: 425px) {
   .profile-image-wrapper {
     margin-top: 80px;
     position: relative;
@@ -304,11 +306,11 @@
 
   .profile-image-upload-button {
     position: absolute;
-    bottom: 255px;
-    right: 21px;
+    bottom: 152px;
+    right: 25px;
     background-color: #3e6553;
     color: #fff;
-    padding: 8px 30px;
+    padding: 6px 17px;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -317,19 +319,79 @@
 
   .rounded-image {
     border-radius: 50%;
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
-    margin-top: -480px;
-  }
-
-  .nav__link {
-    color: var(--title-color);
-    font-weight: 500;
-    transition: .3s;
-    font-size: 22px;
+    margin-top: -360px;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .profile-image-wrapper {
+    margin-top: 80px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .profile-image-upload-button {
+    position: absolute;
+    bottom: 152px;
+    right: 25px;
+    background-color: #3e6553;
+    color: #fff;
+    padding: 6px 17px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .rounded-image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: -360px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .profile-image-wrapper {
+    margin-top: 80px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .profile-image-upload-button {
+    position: absolute;
+    bottom: 152px;
+    right: 25px;
+    background-color: #3e6553;
+    color: #fff;
+    padding: 6px 17px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .rounded-image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: -360px;
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');

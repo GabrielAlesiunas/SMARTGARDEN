@@ -13,6 +13,8 @@ function openModal(titulo, descricao, imagens, preco) {
     modal.querySelector("#nextButton").addEventListener("click", nextSlide);
     modal.querySelector(".modal-overlay").addEventListener("click", closeModal);
 
+    document.body.classList.add("modal-aberto");
+
     function prevSlide() {
         if (currentImage > 0) {
             currentImage--;
@@ -33,6 +35,13 @@ function openModal(titulo, descricao, imagens, preco) {
 
     function updateSlide() {
         modal.querySelector("#modalImage").src = imagens[currentImage];
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    
+        document.body.classList.remove("modal-aberto");
     }
 }
 
@@ -51,6 +60,8 @@ function openModal2(titulo, descricao, imagens, preco) {
     modal.querySelector("#nextButton").addEventListener("click", nextSlide);
     modal.querySelector(".modal-overlay").addEventListener("click", closeModal);
 
+    document.body.classList.add("modal-aberto");
+
     function prevSlide() {
         if (currentImage > 0) {
             currentImage--;
@@ -71,6 +82,13 @@ function openModal2(titulo, descricao, imagens, preco) {
 
     function updateSlide() {
         modal.querySelector("#modalImage").src = imagens[currentImage];
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    
+        document.body.classList.remove("modal-aberto");
     }
 }
 
@@ -89,6 +107,8 @@ function openModal3(titulo, descricao, imagens, preco) {
     modal.querySelector("#nextButton").addEventListener("click", nextSlide);
     modal.querySelector(".modal-overlay").addEventListener("click", closeModal);
 
+    document.body.classList.add("modal-aberto");
+
     function prevSlide() {
         if (currentImage > 0) {
             currentImage--;
@@ -109,6 +129,13 @@ function openModal3(titulo, descricao, imagens, preco) {
 
     function updateSlide() {
         modal.querySelector("#modalImage").src = imagens[currentImage];
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    
+        document.body.classList.remove("modal-aberto");
     }
 }
 
@@ -127,6 +154,8 @@ function openModal4(titulo, descricao, imagens, preco) {
     modal.querySelector("#nextButton").addEventListener("click", nextSlide);
     modal.querySelector(".modal-overlay").addEventListener("click", closeModal);
 
+    document.body.classList.add("modal-aberto");
+
     function prevSlide() {
         if (currentImage > 0) {
             currentImage--;
@@ -147,6 +176,13 @@ function openModal4(titulo, descricao, imagens, preco) {
 
     function updateSlide() {
         modal.querySelector("#modalImage").src = imagens[currentImage];
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    
+        document.body.classList.remove("modal-aberto");
     }
 }
 
@@ -165,6 +201,8 @@ function openModal5(titulo, descricao, imagens, preco) {
     modal.querySelector("#nextButton").addEventListener("click", nextSlide);
     modal.querySelector(".modal-overlay").addEventListener("click", closeModal);
 
+    document.body.classList.add("modal-aberto");
+
     function prevSlide() {
         if (currentImage > 0) {
             currentImage--;
@@ -185,6 +223,13 @@ function openModal5(titulo, descricao, imagens, preco) {
 
     function updateSlide() {
         modal.querySelector("#modalImage").src = imagens[currentImage];
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    
+        document.body.classList.remove("modal-aberto");
     }
 }
 
@@ -203,6 +248,8 @@ function openModal6(titulo, descricao, imagens, preco) {
     modal.querySelector("#nextButton").addEventListener("click", nextSlide);
     modal.querySelector(".modal-overlay").addEventListener("click", closeModal);
 
+    document.body.classList.add("modal-aberto");
+    
     function prevSlide() {
         if (currentImage > 0) {
             currentImage--;
@@ -223,6 +270,13 @@ function openModal6(titulo, descricao, imagens, preco) {
 
     function updateSlide() {
         modal.querySelector("#modalImage").src = imagens[currentImage];
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    
+        document.body.classList.remove("modal-aberto");
     }
 }
 
@@ -270,7 +324,7 @@ var productData4 = {
     imagens: [
       "/assets/img/produto4/frente.png",
       "/assets/img/produto4/cima.png",
-      "/assets/img/produto4/info.png",
+      "/assets/img/produto4/info bertalha.jpg",
     ],
     preco: "R$ 13,50",
 };
@@ -281,7 +335,7 @@ var productData5 = {
     imagens: [
       "/assets/img/produto5/hortela.png",
       "/assets/img/produto5/hortela2.png",
-      "/assets/img/produto5/info.png",
+      "/assets/img/produto5/info hortela.jpg",
     ],
     preco: "R$ 19,90",
 };
@@ -292,7 +346,7 @@ var productData6 = {
     imagens: [
       "/assets/img/produto6/menta1.png",
       "/assets/img/produto6/menta2.png",
-      "/assets/img/produto6/info.png",
+      "/assets/img/produto6/info menta.jpg",
     ],
     preco: "R$ 29,90",
 };

@@ -1,9 +1,6 @@
 VERSÃO PHP: 8.1.13
 
 Coisas que faltam fazer:
-
-Escolher perguntas e respostas melhores para colocar;
-Arrumar as validações da cadastro
 Arrumar o menu nas resoluções 1920, 1440.
 
 

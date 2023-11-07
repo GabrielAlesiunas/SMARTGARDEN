@@ -45,8 +45,8 @@ function realizarLogin() {
 function nomeValidate() {
     const nomeInput = document.getElementById("cdtnome");
     const nomeValue = nomeInput.value;
-    if (nomeValue.length < 4) {
-        nomeInput.setCustomValidity("O nome deve ter pelo menos 4 caracteres.");
+    if (nomeValue.length < 3) {
+        nomeInput.setCustomValidity("O nome deve ter pelo menos 3 caracteres.");
     } else {
         nomeInput.setCustomValidity("");
     }

@@ -1,3 +1,7 @@
+body.modal-aberto {
+  overflow: hidden;
+}
+
 .btnVerMais {
   border-radius: 5px;
   color: white;
