@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 01-Nov-2023 às 17:30
--- Versão do servidor: 8.0.27
--- versão do PHP: 7.4.26
+-- Tempo de geração: 06-Nov-2023 às 21:15
+-- Versão do servidor: 8.0.31
+-- versão do PHP: 8.1.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,12 +30,12 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `configuracaoplanta`;
 CREATE TABLE IF NOT EXISTS `configuracaoplanta` (
   `id` int NOT NULL,
-  `fk_Placa_id` int DEFAULT NULL,
+  `fk_placa_id` int DEFAULT NULL,
   `data` datetime DEFAULT NULL,
   `temperatura_ideal` double DEFAULT NULL,
   `umidade_ideal` double DEFAULT NULL,
   `luminosidade_ideal` double DEFAULT NULL,
-  `fk_Plantas_id` int DEFAULT NULL,
+  `fk_plantas_id` int DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -49,7 +49,7 @@ DROP TABLE IF EXISTS `placa`;
 CREATE TABLE IF NOT EXISTS `placa` (
   `id` int NOT NULL,
   `mac` varchar(50) DEFAULT NULL,
-  `fk_Usuario_id` int DEFAULT NULL,
+  `fk_usuario_id` int DEFAULT NULL,
   `descricao` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `mac` (`mac`)
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `produto` (
 DROP TABLE IF EXISTS `situacaoplanta`;
 CREATE TABLE IF NOT EXISTS `situacaoplanta` (
   `id` int NOT NULL,
-  `fk_Placa_id` int DEFAULT NULL,
+  `fk_placa_id` int DEFAULT NULL,
   `data` datetime DEFAULT NULL,
   `temperatura` double DEFAULT NULL,
   `umidade` double DEFAULT NULL,

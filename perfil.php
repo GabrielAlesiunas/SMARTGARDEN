@@ -72,8 +72,6 @@ mysqli_close($conexao);
             </div>
 
             <div class="nav__btns">
-                <i class="ri-moon-line change-theme" id="theme-button"></i>
-
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-menu-line"></i>
                 </div>
