@@ -60,6 +60,10 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                         <a href="#contact" class="nav__link">Contato</a>
                     </li>
 
+                    <li class="nav__item<?php if (isset($_SESSION['username'])) echo ' Controle'; ?>">
+                        <a href="/controle.php" class="nav__link">Controle</a>
+                    </li>
+
                     <li class="nav__item">
                         <?php if (!isset($_SESSION['username'])) : ?>
                             <a href="telaLoginCad.php" class="nav__link">
@@ -274,13 +278,13 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
                             <h3 class="questions__item-title">
-                                Como funciona um irrigador controlado por Arduino?
+                                Como funciona um irrigador controlado por uma placa ESP32?
                             </h3>
                         </header>
 
                         <div class="questions__content">
                             <p class="questions__description">
-                                Um irrigador controlado por Arduino é um dispositivo que utiliza um microcontrolador Arduino para automatizar o processo de irrigação, permitindo que você programe horários e durações de irrigação de acordo com as necessidades das plantas.
+                                Um irrigador controlado por uma placa ESP32 é um dispositivo que utiliza um microcontrolador para automatizar o processo de irrigação, permitindo que você programe horários e durações de irrigação de acordo com as necessidades das plantas.
                             </p>
                         </div>
                     </div>
@@ -289,7 +293,7 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
                             <h3 class="questions__item-title">
-                                Quais são os benefícios de usar um irrigador controlado por Arduino?
+                                Quais são os benefícios de usar um irrigador controlado por uma placa ESP32?
                             </h3>
                         </header>
 
@@ -310,7 +314,7 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
 
                         <div class="questions__content">
                             <p class="questions__description">
-                                Sim, nossos irrigadores controlados por Arduino têm a capacidade de serem controlados remotamente por meio do aplicativo para smartphone.
+                                Sim, nossos irrigadores controlados por uma ESP32 têm a capacidade de serem controlados remotamente por meio do aplicativo para smartphone.
                             </p>
                         </div>
                     </div>
@@ -321,13 +325,13 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
                             <h3 class="questions__item-title">
-                                É difícil configurar um irrigador controlado por Arduino?
+                                É difícil configurar um irrigador controlado por uma ESP32?
                             </h3>
                         </header>
 
                         <div class="questions__content">
                             <p class="questions__description">
-                                Não, nossos irrigadores controlados por Arduino ja vem com uma pré configuração para cada tipo de planta.
+                                Não, nossos irrigadores controlados pela placa ESP32 já vem com uma pré configuração para cada tipo de planta.
                             </p>
                         </div>
                     </div>
@@ -336,13 +340,13 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
                             <h3 class="questions__item-title">
-                                Posso programar múltiplos horários de irrigação com um único irrigador controlado por Arduino?
+                                Posso programar múltiplos horários de irrigação com um único irrigador controlado por uma placa ESP32?
                             </h3>
                         </header>
 
                         <div class="questions__content">
                             <p class="questions__description">
-                                Sim, nossos irrigadores controlados por Arduino permite que você programe múltiplos horários de irrigação para atender às necessidades específicas das suas plantas.
+                                Sim, nossos irrigadores controlados por placa ESP32 permite que você programe múltiplos horários de irrigação para atender às necessidades específicas das suas plantas.
                             </p>
                         </div>
                     </div>
@@ -351,7 +355,7 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                         <header class="questions__header">
                             <i class="ri-add-line questions__icon"></i>
                             <h3 class="questions__item-title">
-                                O que devo fazer se tiver problemas com o meu irrigador Arduino?
+                                O que devo fazer se tiver problemas com o meu irrigador automatizado?
                             </h3>
                         </header>
 
