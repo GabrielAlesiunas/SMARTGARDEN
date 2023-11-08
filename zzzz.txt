@@ -1,8 +1,7 @@
 VERSÃO PHP: 8.1.13
 
 Coisas que faltam fazer:
-Arrumar o menu nas resoluções 1920, 1440.
-
+Fazer a tela Controle
 
 git config --global user.name "Gabriel Raimundo"
 git config --global user.email gabriel.alesiunas@yahoo.com.br

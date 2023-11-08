@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 07-Nov-2023 às 10:44
--- Versão do servidor: 8.0.27
--- versão do PHP: 7.4.26
+-- Tempo de geração: 08-Nov-2023 às 21:44
+-- Versão do servidor: 8.0.31
+-- versão do PHP: 8.1.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,24 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `smartgarden`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `configuracaoplanta`
+--
+
+DROP TABLE IF EXISTS `configuracaoplanta`;
+CREATE TABLE IF NOT EXISTS `configuracaoplanta` (
+  `id` int NOT NULL,
+  `fk_placa_id` int DEFAULT NULL,
+  `data` datetime DEFAULT NULL,
+  `temperatura_ideal` double DEFAULT NULL,
+  `umidade_ideal` double DEFAULT NULL,
+  `luminosidade_ideal` double DEFAULT NULL,
+  `fk_plantas_id` int DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -51,7 +69,14 @@ CREATE TABLE IF NOT EXISTS `plantas` (
   `umideal` bigint DEFAULT NULL,
   `lumideal` bigint DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Extraindo dados da tabela `plantas`
+--
+
+INSERT INTO `plantas` (`id`, `nome`, `tempideal`, `umideal`, `lumideal`) VALUES
+(1, 'maconha', 21, 24, 40);
 
 -- --------------------------------------------------------
 
@@ -64,9 +89,19 @@ CREATE TABLE IF NOT EXISTS `produto` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) DEFAULT NULL,
   `descricao` varchar(200) DEFAULT NULL,
-  `valor` bigint DEFAULT NULL,
+  `valor` double DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Extraindo dados da tabela `produto`
+--
+
+INSERT INTO `produto` (`id`, `nome`, `descricao`, `valor`) VALUES
+(1, 'Irrigador Automático Inteligente com Arduino', 'Transforme o seu jardim em um oásis verdejante e vibrante com o nosso Irrigador Automático Inteligente baseado em Arduino. Este inovador sistema de irrigação é a solução perfeita para manter suas plan', 119.9),
+(4, 'Hortelã', 'Desperte seu jardineiro interior com o nosso elegante Vaso de Hortelã Fresca. Este pequeno jardim em casa é a maneira perfeita de cultivar hortelã orgânica e fresca em sua cozinha, varanda ou jardim. ', 19.9),
+(5, 'Bertalha Roxa', 'Bem-vindo ao mundo da Bertalha Roxa, uma planta fascinante que combina beleza e sabor em uma única experiência de cultivo. Esta variedade de bertalha não apenas encanta com suas folhas roxas vibrantes', 13.5),
+(6, 'Menta', 'Bem-vindo à nossa seleção de Menta Fresca, um ingrediente versátil que pode transformar suas receitas e momentos de relaxamento. A menta é conhecida por seu sabor refrescante e aroma revigorante, torn', 29.9);
 
 -- --------------------------------------------------------
 
@@ -89,6 +124,23 @@ CREATE TABLE IF NOT EXISTS `situacaoplaca` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `situacaoplanta`
+--
+
+DROP TABLE IF EXISTS `situacaoplanta`;
+CREATE TABLE IF NOT EXISTS `situacaoplanta` (
+  `id` int NOT NULL,
+  `fk_placa_id` int DEFAULT NULL,
+  `data` datetime DEFAULT NULL,
+  `temperatura` double DEFAULT NULL,
+  `umidade` double DEFAULT NULL,
+  `luminosidade` double DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `usuario`
 --
 
@@ -100,7 +152,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `senha` varchar(20) DEFAULT NULL,
   `foto_perfil` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `usuario`

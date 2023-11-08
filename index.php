@@ -60,9 +60,11 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                         <a href="#contact" class="nav__link">Contato</a>
                     </li>
 
-                    <li class="nav__item<?php if (isset($_SESSION['username'])) echo ' Controle'; ?>">
-                        <a href="/controle.php" class="nav__link">Controle</a>
-                    </li>
+                    <?php if (isset($_SESSION['username'])) : ?>
+                        <li class="nav__item Controle">
+                            <a href="/controle.php" class="nav__link">Controle</a>
+                        </li>
+                    <?php endif; ?>
 
                     <li class="nav__item">
                         <?php if (!isset($_SESSION['username'])) : ?>
@@ -191,15 +193,15 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                 <h2 class="modalTitulo"></h2>
                 <p class="modalDescricao"></p>
                 <div class="buttons left">
-                        <button class="arrow-icon" id="prevButton" ><i class="fas fa-chevron-left"></i></button>
-                    </div>
+                    <button class="arrow-icon" id="prevButton"><i class="fas fa-chevron-left"></i></button>
+                </div>
                 <div class="slider">
                     <img src="" alt="Imagem" class="slide" id="modalImage">
-                    
+
                 </div>
                 <div class="buttons right">
-                        <button class="arrow-icon" id="nextButton"><i class="fas fa-chevron-right"></i></button>
-                    </div>
+                    <button class="arrow-icon" id="nextButton"><i class="fas fa-chevron-right"></i></button>
+                </div>
                 <p class="modalPreco"></p>
                 <a href='https://www.mercadolivre.com.br' target="_blank"><button class="btnAddCart">Comprar</button></a>
             </div>
