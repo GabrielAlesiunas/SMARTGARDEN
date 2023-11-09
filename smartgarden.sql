@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 09-Nov-2023 às 00:46
+-- Tempo de geração: 09-Nov-2023 às 01:10
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.1.13
 
@@ -69,14 +69,24 @@ CREATE TABLE IF NOT EXISTS `plantas` (
   `umideal` bigint DEFAULT NULL,
   `lumideal` bigint DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `plantas`
 --
 
 INSERT INTO `plantas` (`id`, `nome`, `tempideal`, `umideal`, `lumideal`) VALUES
-(1, 'maconha', 21, 24, 40);
+(1, 'maconha', 21, 24, 40),
+(2, 'Alface', 16, 60, 3500),
+(3, 'Tomate', 21, 65, 6500),
+(4, 'Cenoura', 19, 80, 3500),
+(5, 'Cebola', 18, 65, 4000),
+(6, 'Pimentão', 25, 70, 6500),
+(7, 'Espinafre', 15, 55, 3500),
+(8, 'Rabanete', 15, 55, 6500),
+(9, 'Menta', 21, 60, 6000),
+(10, 'Hortelã', 21, 60, 6000),
+(11, 'Bertalha Roxa', 25, 75, 7000);
 
 -- --------------------------------------------------------
 
