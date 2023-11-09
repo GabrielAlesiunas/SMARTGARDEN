@@ -28,51 +28,55 @@ function linkAction() {
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
-
-
-
-
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
-  const selectPlant = document.getElementById("selectPlant");
-  const plantInfo = document.getElementById("plantInfo");
-
-  selectPlant.addEventListener("change", function () {
-    const selectedPlantName = selectPlant.value; // Obter o valor selecionado
-
-    console.log("Planta selecionada: " + selectedPlantName); // Adicione esta linha
-
-    // Enviar uma solicitação AJAX para buscar as informações da planta
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", "buscar_planta.php", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        console.log("Resposta do servidor: " + xhr.responseText); // Adicione esta linha
-
-        const response = JSON.parse(xhr.responseText);
-
-        if (response.error) {
-          plantInfo.innerHTML = "Erro ao buscar a planta.";
-        } else {
-          plantInfo.innerHTML = `
-                              <h2>Informações da Planta</h2>
-                              <p>ID: ${response.id}</p>
-                              <p>Nome: ${response.nome}</p>
-                              <p>Temperatura Ideal: ${response.tempideal}</p>
-                              <p>Umidade Ideal: ${response.umideal}</p>
-                              <p>Luminosidade Ideal: ${response.lumideal}</p>
-                          `;
+    const selectPlant = document.getElementById("selectPlant");
+    const plantInfo = document.getElementById("plantInfo");
+  
+    selectPlant.addEventListener("change", function () {
+      const selectedPlantName = selectPlant.value;
+  
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", "buscar_planta.php?nomePlanta=" + selectedPlantName, true);
+  
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          const response = JSON.parse(xhr.responseText);
+  
+          if (response.error) {
+            plantInfo.innerHTML = "Erro ao buscar a planta.";
+          } else {
+            plantInfo.innerHTML = `
+              <h2>Informações da Planta ${selectedPlantName}</h2>
+              <p>Nome: ${response.nome}</p>
+              <p>Temperatura Ideal: ${response.tempideal}ºC</p>
+              <p>Umidade Ideal: ${response.umideal}g/m³</p>
+              <p>Luminosidade Ideal: ${response.lumideal}cd</p>
+            `;
+          }
         }
-      }
-    };
-
-    xhr.send("nomePlanta=" + selectedPlantName); // Enviar o valor selecionado
+      };
+  
+      xhr.send();
+    });
   });
-});
+
+
+
+
+document.getElementById("selectPlant").addEventListener("change", function() {
+    const selectedPlant = this.value;
+    if (selectedPlant) {
+      const plantInfoDiv = document.getElementById("plantInfo");
+
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", "buscar_planta.php?nomePlanta=" + selectedPlant, true);
+
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          plantInfoDiv.innerHTML = xhr.responseText;
+        }
+      };
+
+      xhr.send();
+    }
+  });

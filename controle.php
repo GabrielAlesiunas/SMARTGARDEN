@@ -9,23 +9,6 @@ if (!isset($_SESSION['username'])) {
 
 $nomeDoUsuario = $_SESSION['username'];
 
-$conexao = mysqli_connect("localhost", "root", "", "smartgarden");
-
-if (!$conexao) {
-    die("Erro na conexão com o banco de dados: " . mysqli_connect_error());
-}
-$username = $_SESSION['username'];
-
-$sql = "SELECT nome FROM plantas";
-$result = $conexao->query($sql);
-
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        echo "<option value='" . $row['nome'] . "'>" . $row['nome'] . "</option>";
-    }
-}
-
-mysqli_close($conexao);
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +42,7 @@ mysqli_close($conexao);
                         <?php if (isset($_SESSION['username'])) : ?>
                             <div class="dropdown">
                                 <a class="nav__link" id="dropdownButton">
-                                    <?php echo $username; ?> <i class="fas fa-caret-down"></i>
+                                    <?php echo $nomeDoUsuario; ?> <i class="fas fa-caret-down"></i>
                                 </a>
                                 <div class="dropdown-content" id="dropdownContent">
                                     <a href="logout.php" id="logoutLink">Logout</a>
@@ -83,18 +66,21 @@ mysqli_close($conexao);
         <form>
             <label for="selectPlant">Selecione uma planta:</label>
             <select id="selectPlant" name="nomePlanta">
+                <option value="">Selecione</option>
                 <?php
-                $sql = "SELECT nome FROM plantas";
-                $result = $conexao->query($sql);
+                include('buscar_planta.php');
+                $conexao = mysqli_connect("localhost", "root", "", "smartgarden");
+                $nomesPlantas = buscarNomesPlantas($conexao);
 
-                while ($row = $result->fetch_assoc()) {
-                    echo "<option value='" . $row['nome'] . "'>" . $row['nome'] . "</option>";
+                foreach ($nomesPlantas as $nomePlanta) {
+                    echo "<option value='$nomePlanta'>$nomePlanta</option>";
                 }
+                mysqli_close($conexao);
                 ?>
             </select>
         </form>
         <div id="plantInfo">
-            <!-- Informações da planta selecionada serão exibidas aqui -->
+            <p>Selecione uma planta para ver informações.</p>
         </div>
     </main>
     <script src="assets/js/script Controle.js"></script>

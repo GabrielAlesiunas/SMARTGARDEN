@@ -1,38 +1,33 @@
 <?php
-session_start();
-include_once('config.php');
-
-if (!isset($_SESSION['username'])) {
-    header('Location: login.php');
-    exit();
-}
-
-$nomeDoUsuario = $_SESSION['username'];
-
-$conexao = mysqli_connect("localhost", "root", "", "smartgarden");
-
-if (!$conexao) {
-    die("Erro na conexão com o banco de dados: " . mysqli_connect_error());
-}
-
-if (isset($_POST['nomePlanta'])) { // Verifica se a variável POST 'nomePlanta' está definida
-    $nomePlanta = $_POST['nomePlanta'];
-
-    $sql = "SELECT * FROM plantas WHERE nome = '$nomePlanta'";
+function buscarNomesPlantas($conexao) {
+    $sql = "SELECT nome FROM plantas";
     $result = $conexao->query($sql);
+    $nomesPlantas = [];
 
     if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $response = $row;
-    } else {
-        $response = array('error' => true);
+        while ($row = $result->fetch_assoc()) {
+            $nomesPlantas[] = $row['nome'];
+        }
     }
-} else {
-    $response = array('error' => true);
+
+    return $nomesPlantas;
 }
 
-mysqli_close($conexao);
+if (isset($_GET['nomePlanta'])) {
+    $nomePlanta = $_GET['nomePlanta'];
 
-header('Content-Type: application/json');
-echo json_encode($response);
+    $conexao = mysqli_connect("localhost", "root", "", "smartgarden");
+
+    $query = "SELECT * FROM plantas WHERE nome = '$nomePlanta'";
+    $resultado = mysqli_query($conexao, $query);
+
+    $dadosPlanta = mysqli_fetch_assoc($resultado);
+
+    if ($dadosPlanta) {
+        header('Content-Type: application/json');
+        echo json_encode($dadosPlanta);
+    }
+
+    mysqli_close($conexao);
+}
 ?>
