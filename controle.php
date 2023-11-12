@@ -82,6 +82,30 @@ $nomeDoUsuario = $_SESSION['username'];
         <div id="plantInfo">
             <p>Selecione uma planta para ver informações.</p>
         </div>
+
+        <form class="formInfo" action="atualizarInfoPlantas.php" method="get">
+            <!-- Luminosidade Ideal -->
+            <div class="divLuminosidade">
+                <label for="volLuminosidade">Luminosidade Ideal:</label>
+                <input type="range" id="volLuminosidade" name="volLuminosidade" min="0" max="100" oninput="exibirLuminosidade(this.value)">
+                <span id="valorLuminosidade">50%</span>
+            </div>
+
+            <!-- Temperatura Ideal -->
+            <div class="divTemperatura">
+                <label for="volTemperatura">Temperatura Ideal:</label>
+                <input type="range" id="volTemperatura" name="volTemperatura" min="0" max="100" oninput="exibirTemperatura(this.value)">
+                <span id="valorTemperatura">50%</span>
+            </div>
+
+            <!-- Umidade Ideal -->
+            <div class="divUmidade">
+                <label for="volUmidade">Umidade Ideal:</label>
+                <input type="range" id="volUmidade" name="volUmidade" min="0" max="100" oninput="exibirUmidade(this.value)">
+                <span id="valorUmidade">50%</span>
+            </div>
+            <input class="btnAtualizar" type="submit" value="Atualizar">
+        </form>
     </main>
     <script src="assets/js/script Controle.js"></script>
 </body>

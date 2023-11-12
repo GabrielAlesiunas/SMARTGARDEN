@@ -147,14 +147,11 @@ select {
   }
 }
 
-@media screen and (max-width: 425px) {
-}
+@media screen and (max-width: 425px) {}
 
-@media screen and (max-width: 375px) {
-}
+@media screen and (max-width: 375px) {}
 
-@media screen and (max-width: 320px) {
-}
+@media screen and (max-width: 320px) {}
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
@@ -472,4 +469,149 @@ img {
   .scrollup {
     right: 3rem;
   }
+}
+
+
+
+
+/* .horario {
+  display: block;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.txthorario {
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btnProgramar {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.statusIrrigacao {
+  font-size: 18px;
+  color: #4caf50;
+} */
+
+
+#umidade {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#barra-umidade {
+  width: 300px;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+#porcentagem {
+  width: 70%;
+  /* Ajuste inicial para a porcentagem desejada */
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 10px;
+  transition: width 0.5s;
+}
+
+/* Umidade Ideal */
+.divUmidade {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.divUmidade input[type="range"]:active,
+.divUmidade input[type="range"]:focus {
+  outline: none;
+}
+
+.divUmidade input[type="range"] {
+  appearance: none;
+  background-color: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  margin-left: 47px;
+}
+
+.divUmidade input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #3e6553;
+}
+
+/* Temperatura Ideal */
+.divTemperatura {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.divTemperatura input[type="range"]:active,
+.divTemperatura input[type="range"]:focus {
+  outline: none;
+}
+
+.divTemperatura input[type="range"] {
+  appearance: none;
+  background-color: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  margin-left: 25px;
+}
+
+.divTemperatura input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #3e6553;
+}
+
+/* Luminosidade Ideal */
+.divLuminosidade {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.divLuminosidade input[type="range"]:active,
+.divLuminosidade input[type="range"]:focus {
+  outline: none;
+}
+
+.divLuminosidade input[type="range"] {
+  appearance: none;
+  background-color: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  margin: 0px;
+  padding: 0;
+  margin-left: 15px;
+}
+
+.divLuminosidade input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #3e6553;
+}
+
+.formInfo{
+  text-align: center;
+}
+.btnAtualizar{
+  margin-top: 15px;
 }
