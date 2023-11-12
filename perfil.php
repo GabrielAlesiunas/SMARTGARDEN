@@ -64,6 +64,7 @@ mysqli_close($conexao);
                                 </a>
                                 <div class="dropdown-content" id="dropdownContent">
                                     <a href="logout.php" id="logoutLink">Logout</a>
+                                    <a href="deletPerfil.php" id="deletLink">Excluir Perfil</a>
                                 </div>
                             </div>
                         <?php endif; ?>
