@@ -9,6 +9,12 @@ if (!isset($_SESSION['username'])) {
 
 $nomeDoUsuario = $_SESSION['username'];
 
+$sql = "SELECT placa.temperatura, placa.umidade, placa.luminosidade FROM placa WHERE id = 1";
+$result = $conexao->query($sql);
+
+$placaData = $result->fetch_assoc();
+
+$conexao->close();
 ?>
 
 <!DOCTYPE html>
@@ -63,6 +69,10 @@ $nomeDoUsuario = $_SESSION['username'];
 
     <main>
         <h1 id="perfilUser">Controle de Irrigação das Plantas</h1>
+
+        <button class="btnConfigPD">Configuração Pré Definido</button>
+        <button class="btnPersonalizar">Personalizar</button>
+
         <form>
             <label for="selectPlant">Selecione uma planta:</label>
             <select id="selectPlant" name="nomePlanta">
@@ -83,28 +93,28 @@ $nomeDoUsuario = $_SESSION['username'];
             <p>Selecione uma planta para ver informações.</p>
         </div>
 
-        <form class="formInfo" action="atualizarInfoPlantas.php" method="get">
+        <form class="formInfo" id="formAtualizar" style="display: none;">
             <!-- Luminosidade Ideal -->
             <div class="divLuminosidade">
                 <label for="volLuminosidade">Luminosidade Ideal:</label>
-                <input type="range" id="volLuminosidade" name="volLuminosidade" min="0" max="10000" oninput="exibirLuminosidade(this.value)">
-                <span id="valorLuminosidade">50cd</span>
+                <input type="range" id="volLuminosidade" name="volLuminosidade" min="0" max="100" oninput="exibirLuminosidade(this.value)">
+                <span id="spanLuminosidade"><?php echo $placaData['luminosidade']; ?>%</span>
             </div>
 
             <!-- Temperatura Ideal -->
             <div class="divTemperatura">
                 <label for="volTemperatura">Temperatura Ideal:</label>
                 <input type="range" id="volTemperatura" name="volTemperatura" min="0" max="45" oninput="exibirTemperatura(this.value)">
-                <span id="valorTemperatura">50°C</span>
+                <span id="spanTemperatura"><?php echo $placaData['temperatura']; ?>°C</span>
             </div>
 
             <!-- Umidade Ideal -->
             <div class="divUmidade">
                 <label for="volUmidade">Umidade Ideal:</label>
                 <input type="range" id="volUmidade" name="volUmidade" min="0" max="100" oninput="exibirUmidade(this.value)">
-                <span id="valorUmidade">50g/m³</span>
+                <span id="spanUmidade"><?php echo $placaData['umidade']; ?>%</span>
             </div>
-            <input class="btnAtualizar" type="submit" value="Atualizar">
+            <input class="btnAtualizar" type="button" value="Atualizar" onclick="enviarParaBanco()">
         </form>
     </main>
     <script src="assets/js/script Controle.js"></script>

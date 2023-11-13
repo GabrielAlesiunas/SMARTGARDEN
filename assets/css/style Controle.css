@@ -615,3 +615,32 @@ img {
 .btnAtualizar{
   margin-top: 15px;
 }
+
+
+.btnPersonalizar {
+  background-color: #006400; /* Cor verde escuro */
+  color: #fff; /* Texto branco para contrastar */
+  padding: 10px 20px; /* Ajuste o padding conforme necessário */
+  border: none;
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer;
+  font-size: 16px; /* Tamanho da fonte */
+}
+
+.btnPersonalizar:hover {
+  background-color: #008000; /* Cor alterada no hover */
+}
+
+.btnConfigPD {
+  background-color: #006400; /* Cor verde escuro */
+  color: #fff; /* Texto branco para contrastar */
+  padding: 10px 20px; /* Ajuste o padding conforme necessário */
+  border: none;
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer;
+  font-size: 16px; /* Tamanho da fonte */
+}
+
+.btnConfigPD:hover {
+  background-color: #008000;
+}

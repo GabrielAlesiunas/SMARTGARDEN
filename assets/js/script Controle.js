@@ -28,6 +28,22 @@ function linkAction() {
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
+
+document.addEventListener('DOMContentLoaded', function () {
+  var formAtualizar = document.getElementById('formAtualizar');
+
+  var btnConfigPD = document.querySelector('.btnConfigPD');
+  var btnPersonalizar = document.querySelector('.btnPersonalizar');
+
+  btnConfigPD.addEventListener('click', function () {
+      formAtualizar.style.display = 'none';
+  });
+ 
+  btnPersonalizar.addEventListener('click', function () {
+      formAtualizar.style.display = 'block';
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const selectPlant = document.getElementById("selectPlant");
   const plantInfo = document.getElementById("plantInfo");
@@ -80,13 +96,35 @@ document.getElementById("selectPlant").addEventListener("change", function () {
 
 
 function exibirLuminosidade(valor) {
-  document.getElementById('valorLuminosidade').textContent = valor + 'cd';
+  document.getElementById('spanLuminosidade').textContent = valor + '%';
 }
 
 function exibirUmidade(valor) {
-  document.getElementById('valorUmidade').textContent = valor + 'g/m³';
+  document.getElementById('spanUmidade').textContent = valor + '%';
 }
 
 function exibirTemperatura(valor) {
-  document.getElementById('valorTemperatura').textContent = valor + '°C';
+  document.getElementById('spanTemperatura').textContent = valor + '°C';
+}
+
+function enviarParaBanco() {
+  var luminosidade = document.getElementById('volLuminosidade').value;
+  var temperatura = document.getElementById('volTemperatura').value;
+  var umidade = document.getElementById('volUmidade').value;
+
+  var formData = new FormData();
+  formData.append('luminosidade', luminosidade);
+  formData.append('temperatura', temperatura);
+  formData.append('umidade', umidade);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'atualizarInfoPlantas.php', true);
+  xhr.onload = function () {
+      if (xhr.status === 200) {
+          console.log(xhr.responseText);
+      } else {
+          console.error('Erro ao enviar para o servidor. Status: ' + xhr.status);
+      }
+  };
+  xhr.send(formData);
 }
