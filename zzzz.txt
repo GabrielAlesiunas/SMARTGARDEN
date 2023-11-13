@@ -5,3 +5,9 @@ Fazer a tela Controle
 
 git config --global user.name "Gabriel Raimundo"
 git config --global user.email gabriel.alesiunas@yahoo.com.br
+
+
+git init
+git add .
+git commit -m "Comentário que deseja realizar ao publicar seu projeto no GitHub"
+git push

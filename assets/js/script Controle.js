@@ -78,53 +78,15 @@ document.getElementById("selectPlant").addEventListener("change", function () {
   }
 });
 
-// function programar() {
-//   var horario = document.getElementById("horario").value;
-
-//   // Certifique-se de ajustar a URL para a rota correta em sua ESP32
-//   var url = "http://endereco-da-sua-esp32/rota-para-programar";
-
-//   // Dados a serem enviados no corpo da requisição
-//   var dados = {
-//     horario: horario,
-//     // Adicione outros dados, se necessário
-//   };
-
-//   fetch(url, {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//       // Adicione outros cabeçalhos, se necessário
-//     },
-//     body: JSON.stringify(dados),
-//   })
-//     .then((response) => response.json())
-//     .then((data) => {
-//       // Manipule a resposta da ESP32 aqui
-//       console.log("Resposta da ESP32:", data);
-
-//       // Atualize o status da planta com a resposta da ESP32
-//       atualizarStatusPlanta(data.status);
-//     })
-//     .catch((error) => {
-//       console.error("Erro ao enviar requisição para a ESP32:", error);
-//     });
-// }
-
-// function atualizarStatusPlanta(status) {
-//   // Atualize o elemento HTML com o status da planta
-//   var statusElement = document.getElementById("status");
-//   statusElement.textContent = "Status da Planta: " + status;
-// }
 
 function exibirLuminosidade(valor) {
-  document.getElementById('valorLuminosidade').textContent = valor + '%';
+  document.getElementById('valorLuminosidade').textContent = valor + 'cd';
 }
 
 function exibirUmidade(valor) {
-  document.getElementById('valorUmidade').textContent = valor + '%';
+  document.getElementById('valorUmidade').textContent = valor + 'g/m³';
 }
 
 function exibirTemperatura(valor) {
-  document.getElementById('valorTemperatura').textContent = valor + '%';
+  document.getElementById('valorTemperatura').textContent = valor + '°C';
 }

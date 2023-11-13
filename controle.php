@@ -87,22 +87,22 @@ $nomeDoUsuario = $_SESSION['username'];
             <!-- Luminosidade Ideal -->
             <div class="divLuminosidade">
                 <label for="volLuminosidade">Luminosidade Ideal:</label>
-                <input type="range" id="volLuminosidade" name="volLuminosidade" min="0" max="100" oninput="exibirLuminosidade(this.value)">
-                <span id="valorLuminosidade">50%</span>
+                <input type="range" id="volLuminosidade" name="volLuminosidade" min="0" max="10000" oninput="exibirLuminosidade(this.value)">
+                <span id="valorLuminosidade">50cd</span>
             </div>
 
             <!-- Temperatura Ideal -->
             <div class="divTemperatura">
                 <label for="volTemperatura">Temperatura Ideal:</label>
-                <input type="range" id="volTemperatura" name="volTemperatura" min="0" max="100" oninput="exibirTemperatura(this.value)">
-                <span id="valorTemperatura">50%</span>
+                <input type="range" id="volTemperatura" name="volTemperatura" min="0" max="45" oninput="exibirTemperatura(this.value)">
+                <span id="valorTemperatura">50°C</span>
             </div>
 
             <!-- Umidade Ideal -->
             <div class="divUmidade">
                 <label for="volUmidade">Umidade Ideal:</label>
                 <input type="range" id="volUmidade" name="volUmidade" min="0" max="100" oninput="exibirUmidade(this.value)">
-                <span id="valorUmidade">50%</span>
+                <span id="valorUmidade">50g/m³</span>
             </div>
             <input class="btnAtualizar" type="submit" value="Atualizar">
         </form>
