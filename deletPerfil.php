@@ -23,7 +23,7 @@ if ($result) {
     $queryExclusao = "DELETE FROM usuario WHERE id = $idUsuario";
     
     if (mysqli_query($conexao, $queryExclusao)) {
-        header('Location: login.php');
+        header('Location: telaLoginCad.php');
         exit();
     } else {
         echo 'Erro ao excluir perfil: ' . mysqli_error($conexao);
