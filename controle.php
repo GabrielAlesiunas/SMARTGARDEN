@@ -28,6 +28,7 @@ $conexao->close();
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/style Controle.css">
     <script src="assets/js/script Dropdown.js"></script>
 </head>
 
@@ -60,6 +61,8 @@ $conexao->close();
             </div>
 
             <div class="nav__btns">
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-menu-line"></i>
                 </div>

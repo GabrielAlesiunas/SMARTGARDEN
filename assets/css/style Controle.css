@@ -4,7 +4,6 @@ main {
   margin-top: 20px;
   border-radius: 8px;
 }
-
 select {
   padding: 10px;
   border: 1px solid #ccc;
@@ -49,6 +48,25 @@ select {
     transition: .3s;
     font-size: 22px;
   }
+}
+.dark-theme {
+  background-color: #3e6553;
+  color: #ffffff;
+}
+
+.dark-theme .body {
+  background-color: #3e6553;
+}
+
+.dark-theme .main {
+  background-color: #3e6553;
+}
+
+.dark-theme .nav {
+  background-color: #3e6553;
+}
+.dark-theme .change-theme{
+  color: black;
 }
 
 @media screen and (max-width: 1440px) {
@@ -470,35 +488,6 @@ img {
     right: 3rem;
   }
 }
-
-
-
-
-/* .horario {
-  display: block;
-  margin-top: 20px;
-  font-size: 18px;
-}
-
-.txthorario {
-  padding: 8px;
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.btnProgramar {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.statusIrrigacao {
-  font-size: 18px;
-  color: #4caf50;
-} */
 
 
 #umidade {

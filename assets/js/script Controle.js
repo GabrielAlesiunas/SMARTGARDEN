@@ -128,3 +128,29 @@ function enviarParaBanco() {
   };
   xhr.send(formData);
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Verifica se há preferência de tema no armazenamento local
+  const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+
+  // Aplica o tema escuro se a preferência estiver ativada
+  if (isDarkMode) {
+      document.body.classList.add('dark-theme');
+  }
+
+  // Adiciona um ouvinte de evento ao botão de mudança de tema
+  const themeButton = document.getElementById('theme-button');
+  if (themeButton) {
+      themeButton.addEventListener('click', function () {
+          // Inverte o tema ao clicar no botão
+          document.body.classList.toggle('dark-theme');
+
+          // Salva a preferência de tema no armazenamento local
+          if (document.body.classList.contains('dark-theme')) {
+              localStorage.setItem('darkMode', 'enabled');
+          } else {
+              localStorage.setItem('darkMode', 'disabled');
+          }
+      });
+  }
+});
