@@ -70,14 +70,14 @@ $conexao->close();
         </nav>
     </header>
 
-    <main>
+    <div>
         <h1 id="perfilUser">Controle de Irrigação das Plantas</h1>
 
         <button class="btnConfigPD">Configuração Pré Definido</button>
         <button class="btnPersonalizar">Personalizar</button>
 
         <form>
-            <label for="selectPlant">Selecione uma planta:</label>
+            <label class="selectPlant" for="selectPlant">Selecione uma planta:</label>
             <select id="selectPlant" name="nomePlanta">
                 <option value="">Selecione</option>
                 <?php
@@ -93,7 +93,7 @@ $conexao->close();
             </select>
         </form>
         <div id="plantInfo">
-            <p>Selecione uma planta para ver informações.</p>
+            <p class="info" >Selecione uma planta para ver informações.</p>
         </div>
 
         <form class="formInfo" id="formAtualizar" style="display: none;">
@@ -119,7 +119,7 @@ $conexao->close();
             </div>
             <input class="btnAtualizar" type="button" value="Atualizar" onclick="enviarParaBanco()">
         </form>
-    </main>
+    </div>
     <script src="assets/js/script Controle.js"></script>
 </body>
 

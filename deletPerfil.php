@@ -1,11 +1,8 @@
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <?php
 session_start();
 include_once('config.php');
-?>
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-<?php
 if (!isset($_SESSION['username'])) {
     header('Location: login.php');
     exit();
@@ -17,14 +14,18 @@ if (!$conexao) {
     die("Erro na conexão com o banco de dados: " . mysqli_connect_error());
 }
 
-$query = "SELECT id FROM usuario WHERE nome = '$nomeDoUsuario'";
-$result = mysqli_query($conexao, $query);
+$query = "SELECT id FROM usuario WHERE nome = ?";
+$stmt = mysqli_prepare($conexao, $query);
+mysqli_stmt_bind_param($stmt, 's', $nomeDoUsuario);
 
-if ($result) {
+if (mysqli_stmt_execute($stmt)) {
+    $result = mysqli_stmt_get_result($stmt);
     $row = mysqli_fetch_assoc($result);
-    $idUsuario = $row['id'];
 
-    echo '<script>
+    if ($row) {
+        $idUsuario = $row['id'];
+
+        echo '<script>
         Swal.fire({
             title: "Você tem certeza?",
             text: "Esta ação é irreversível!",
@@ -62,9 +63,9 @@ if ($result) {
             }
         });
     </script>';
-} else {
-    echo 'Erro ao buscar ID do usuário.';
+    } else {
+        echo 'Erro ao buscar ID do usuário.';
+    }
 }
-
+mysqli_stmt_close($stmt);
 mysqli_close($conexao);
-?>

@@ -1,7 +1,8 @@
 VERSÃO PHP: 8.1.13
 
 Coisas que faltam fazer:
-Fazer a tela Controle
+Arrumar o local onde aparece as informações das plantas nas resoluções.
+
 
 git config --global user.name "Gabriel Raimundo"
 git config --global user.email gabriel.alesiunas@yahoo.com.br
