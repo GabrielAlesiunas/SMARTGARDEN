@@ -93,7 +93,7 @@ $conexao->close();
             </select>
         </form>
         <div id="plantInfo">
-            <p class="info" >Selecione uma planta para ver informações.</p>
+            <p class="info">Selecione uma planta para ver informações.</p>
         </div>
 
         <form class="formInfo" id="formAtualizar" style="display: none;">
@@ -119,8 +119,40 @@ $conexao->close();
             </div>
             <input class="btnAtualizar" type="button" value="Atualizar" onclick="enviarParaBanco()">
         </form>
+
+
+        <div class="perfilUser">
+            <h2>Pesquisa de Dados</h2>
+
+            <form id="formPesquisa">
+                <label for="pesquisa">Pesquisar:</label>
+                <input type="text" id="pesquisa" name="pesquisa" placeholder="Digite sua pesquisa...">
+                <button type="button" onclick="buscarDados()">Buscar</button>
+            </form>
+
+            <!-- Local onde os resultados da pesquisa serão exibidos -->
+            <div id="resultadoPesquisa"></div>
+        </div>
     </div>
+
     <script src="assets/js/script Controle.js"></script>
+
+    <script>
+        function buscarDados() {
+            var pesquisa = document.getElementById("pesquisa").value;
+
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById("resultadoPesquisa").innerHTML = xhr.responseText;
+                }
+            };
+
+            xhr.open("POST", "buscar_dados.php", true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send("pesquisa=" + pesquisa);
+        }
+    </script>
 </body>
 
 </html>
