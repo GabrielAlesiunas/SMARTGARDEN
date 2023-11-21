@@ -116,9 +116,9 @@ body {
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    margin-top: 80px;
-    height: fit-content;
-    width: 74%;
+    margin-top: 90px;
+    height: 75%;
+    width: 60%;
     animation-name: modalopen;
     animation-duration: 0.5s;
   }
@@ -126,25 +126,25 @@ body {
   .modalTitulo {
     font-family: Poppins-Regular;
     color: black;
-    font-size: 45px;
+    font-size: 40px;
     line-height: 1.5;
     padding-bottom: 0px;
     margin: 0px;
-  }
+}
 
-  .modalDescricao {
-    font-family: Poppins-Regular;
-    font-size: 26px;
-    line-height: 1.4;
-    padding: 15px;
-  }
+.modalDescricao {
+  font-family: Poppins-Regular;
+  font-size: 22px;
+  line-height: 1.4;
+  padding: 15px;
+}
 
-  img.slide {
-    width: 500px;
-    height: 430px;
-    margin-top: 20px;
-    border-radius: 30px;
-  }
+img.slide {
+  width: 430px;
+  height: 375px;
+  margin-top: 20px;
+  border-radius: 30px;
+}
 
   .arrow-icon {
     color: #fff;
@@ -167,7 +167,7 @@ body {
 
   .modalPreco {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 1.388888;
     margin-top: 20px;
   }
@@ -191,11 +191,11 @@ body {
     justify-content: center;
     -ms-align-items: center;
     align-items: center;
-    width: 315px;
-    height: 43px;
-    font-size: 22px;
-    margin-top: 30px;
-  }
+    width: 255px;
+    height: 35px;
+    font-size: 19px;
+    margin-top: 10px;
+}
 
   .product__container {
     padding: 3rem 0;
@@ -238,9 +238,9 @@ body {
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    margin-top: 99px;
-    height: 81%;
-    width: 74%;
+    margin-top: 90px;
+    height: 82%;
+    width: 70%;
     animation-name: modalopen;
     animation-duration: 0.5s;
   }
@@ -248,7 +248,7 @@ body {
   .modalTitulo {
     font-family: Poppins-Regular;
     color: black;
-    font-size: 45px;
+    font-size: 40px;
     line-height: 1.5;
     padding-bottom: 0px;
     margin: 0px;
@@ -256,15 +256,15 @@ body {
 
   .modalDescricao {
     font-family: Poppins-Regular;
-    font-size: 26px;
+    font-size: 23px;
     line-height: 1.4;
     padding: 15px;
   }
 
   img.slide {
     width: 500px;
-    height: 430px;
-    margin-top: 20px;
+    height: 400px;
+    margin-top: 40px;
     border-radius: 30px;
   }
 
@@ -313,8 +313,8 @@ body {
     justify-content: center;
     -ms-align-items: center;
     align-items: center;
-    width: 315px;
-    height: 43px;
+    width: 310px;
+    height: 40px;
     font-size: 22px;
     margin-top: 10px;
   }
@@ -445,7 +445,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem 2rem;
   }
-} 
+}
 
 @media screen and (max-width: 1024px) {
   .modalProduto {
@@ -482,14 +482,14 @@ body {
     text-align: center;
     margin: 0 auto;
     margin-top: 85px;
-    height: 77%;
-    width: 70%;
+    height: 79%;
+    width: 72%;
   }
 
   .modalTitulo {
     font-family: Poppins-Regular;
     color: black;
-    font-size: 36px;
+    font-size: 34px;
     line-height: 1.5;
     padding-bottom: 0px;
     margin: 0px;
@@ -497,18 +497,18 @@ body {
 
   .modalDescricao {
     font-family: Poppins-Regular;
-    font-size: 22px;
+    font-size: 21px;
     line-height: 1.4;
     padding: 15px;
   }
 
   img.slide {
-    margin-top: 35px;
-    width: 380px;
-    height: 380px;
+    margin-top: 20px;
+    width: 370px;
+    height: 330px;
     border-radius: 30px;
   }
-  
+
   .arrow-icon {
     color: #fff;
     background-color: black;
@@ -517,7 +517,7 @@ body {
     padding: 4px;
     font-size: 27px;
     border-radius: 4px;
-    margin-top: 180px;
+    margin-top: 134px;
   }
 
   .buttons.right {
@@ -600,25 +600,23 @@ body {
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    margin-top: 150px;
-    height: 62%;
-    width: 70%;
-    ;
+    margin-top: 130px;
+    height: 70%;
+    width: 80%;
   }
 
   .modalTitulo {
     font-family: Poppins-Regular;
     color: black;
-    font-size: 36px;
     padding-bottom: 2px;
-    font-size: 34px;
+    font-size: 32px;
     line-height: 0.8;
     margin: 3px;
   }
 
   .modalDescricao {
     font-family: Poppins-Regular;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 1.4;
     padding: 10px;
   }
@@ -632,8 +630,8 @@ body {
 
   img.slide {
     margin-top: 30px;
-    width: 250px;
-    height: 300px;
+    width: 320px;
+    height: 280px;
     border-radius: 30px;
   }
 
@@ -641,7 +639,7 @@ body {
     font-size: 27px;
     border-radius: 4px;
     padding: 2px;
-    margin-top: 170px;
+    margin-top: 140px;
   }
 
   .buttons.right {
@@ -725,39 +723,39 @@ body {
   .modalTitulo {
     font-family: Poppins-Regular;
     color: black;
-    font-size: 36px;
     padding-bottom: 0px;
-    font-size: 31px;
+    font-size: 26px;
     line-height: 0.9;
     margin: 0px;
   }
 
   .modalDescricao {
     font-family: Poppins-Regular;
-    font-size: 19px;
+    font-size: 17px;
     line-height: 1.4;
     padding: 14px;
   }
 
   img.slide {
-    width: 220px;
-    height: 260px;
+    width: 230px;
+    height: 200px;
     border-radius: 20px;
+    margin-top: 4px;
   }
 
   .arrow-icon {
     font-size: 23px;
     border-radius: 4px;
     margin: -4px;
-    margin-top: 255px;
+    margin-top: 185px;
   }
 
   .buttons.right {
-    right: 5px;
+    right: -10px;
   }
 
   .buttons.left {
-    left: 40px;
+    left: 25px;
   }
 
   .close-button-product {
@@ -798,7 +796,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: -2px;
-}
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -828,53 +826,53 @@ body {
     color: black;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 2;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    margin-top: 150px;
-    height: 66%;
-    width: 86%;
+    margin-top: 158px;
+    height: 69%;
+    width: 88%;
   }
 
   .modalTitulo {
     font-family: Poppins-Regular;
     color: black;
     padding-bottom: 0px;
-    font-size: 28px;
-    line-height: 1.0;
+    font-size: 26px;
+    line-height: 0.9;
     margin: 0px;
   }
 
   .modalDescricao {
     font-family: Poppins-Regular;
-    font-size: 19px;
+    font-size: 17px;
     line-height: 1.4;
     padding: 14px;
   }
 
   img.slide {
-    width: 220px;
-    height: 220px;
-    border-radius: 15px;
-    margin-top: 5px;
+    width: 230px;
+    height: 200px;
+    border-radius: 20px;
+    margin-top: 4px;
   }
 
   .arrow-icon {
     font-size: 24px;
     border-radius: 4px;
-    margin-top: 300px;
+    margin-top: 220px;
   }
 
   .buttons.right {
-    right: -15px;
+    right: -25px;
   }
 
   .buttons.left {
-    left: 24px;
+    left: 15px;
   }
 
   .close-button-product {
@@ -949,8 +947,8 @@ body {
     text-align: center;
     margin: 0 auto;
     margin-top: 190px;
-    height: 59%;
-    width: 84%;
+    height: 60%;
+    width: 87%;
   }
 
   .product__container {
@@ -971,8 +969,8 @@ body {
   .modalDescricao {
     font-family: Poppins-Regular;
     font-size: 16px;
-    line-height: 1.4;
-    padding: 14px;
+    line-height: 1.1;
+    padding: 4px;
   }
 
   img.slide {
@@ -985,7 +983,7 @@ body {
   .arrow-icon {
     font-size: 20px;
     border-radius: 4px;
-    margin-top: 250px;
+    margin-top: 160px;
   }
 
   .buttons.right {
@@ -1018,4 +1016,12 @@ body {
     font-size: 15px;
     line-height: 1.466667;
   }
+
+  .modalPreco {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 21px;
+    line-height: 1.388888;
+    margin-top: 10px;
+  }
+
 }
