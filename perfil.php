@@ -66,7 +66,7 @@ mysqli_close($conexao);
                                 </a>
                                 <div class="dropdown-content" id="dropdownContent">
                                     <a href="logout.php" id="logoutLink">Logout</a>
-                                    <a href="deletPerfil.php" id="deletLink">Excluir Perfil</a>
+                                    <a href="#" id="deletLink">Excluir Perfil</a>
                                 </div>
                             </div>
                         <?php endif; ?>
@@ -102,7 +102,27 @@ mysqli_close($conexao);
             </div>
         </div>
     </main>
-    <script src="assets/js/script User.js"></script>
 </body>
+<script src="assets/js/script User.js"></script>
+
+<script>
+document.getElementById('deletLink').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    Swal.fire({
+        title: 'Tem certeza que deseja excluir o perfil?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sim, excluir!',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = 'deletPerfil.php';
+        }
+    });
+});
+</script>
 
 </html>
