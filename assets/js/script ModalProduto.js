@@ -297,25 +297,25 @@ var productData1 = {
 };
 
 var productData2 = {
-  titulo: "Produto 2",
-  descricao: "Descrição 2",
+  titulo: "Placa ESP32",
+  descricao: "Desvende o mundo da inovação com a nossa Placa ESP32, uma solução versátil e potente para os entusiastas da eletrônica e desenvolvedores ávidos. Projetada para oferecer desempenho excepcional e conectividade avançada, a ESP32 é a escolha ideal para projetos personalizados e inovadores.",
   imagens: [
-    "/assets/img/produto2.png",
-    "/assets/img/product2.png",
-    "/assets/img/product3.png",
+    "/assets/img/produto2/esp321.png",
+    "/assets/img/produto2/esp322.png",
+    "/assets/img/produto2/esp323.png",
   ],
-  preco: "R$ 46,00",
+  preco: "R$  49,90",
 };
 
 var productData3 = {
-    titulo: "Produto3",
-    descricao: "Descrição 3",
+    titulo: "Kit de Sensores",
+    descricao: "Explore a personalização e a inteligência em seus projetos com nossos Sensores de Umidade, Luminosidade e Temperatura. Desenvolvidos para proporcionar medições precisas em tempo real, esses sensores são ideais para aprimorar a automação em uma variedade de aplicações.",
     imagens: [
-      "/assets/img/produto3.png",
-      "/assets/img/product2.png",
-      "/assets/img/product3.png",
+      "/assets/img/produto3/luminosidade.png",
+      "/assets/img/produto3/temperatura.png",
+      "/assets/img/produto3/umidade.png",
     ],
-    preco: "R$ 46,00",
+    preco: "R$ 39,90",
 };
 
 var productData4 = {

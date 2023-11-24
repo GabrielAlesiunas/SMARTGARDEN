@@ -1,20 +1,16 @@
 <?php
 session_start();
 
-// Verifique se o usuário está logado
 if (!isset($_SESSION['username'])) {
     header('Location: login.php');
     exit();
 }
 
-// Diretório onde as imagens de perfil são armazenadas
 $diretorio_destino = 'assets/img/imgPerfil/';
 
-// Nome do arquivo da imagem
 $nome_arquivo = $_FILES['perfil_imagem']['name'];
 $caminho_completo = $diretorio_destino . $nome_arquivo;
 
-// Verifique se o arquivo é uma imagem válida (pode adicionar mais validações)
 $extensoes_permitidas = array('jpg', 'jpeg', 'png', 'gif');
 $extensao_arquivo = strtolower(pathinfo($caminho_completo, PATHINFO_EXTENSION));
 
@@ -23,9 +19,7 @@ if (!in_array($extensao_arquivo, $extensoes_permitidas)) {
     exit();
 }
 
-// Move o arquivo para o diretório de destino
 if (move_uploaded_file($_FILES['perfil_imagem']['tmp_name'], $caminho_completo)) {
-    // Atualize o caminho da imagem de perfil no banco de dados
     $username = $_SESSION['username'];
     $conexao = mysqli_connect("localhost", "root", "", "smartgarden");
     
@@ -37,7 +31,7 @@ if (move_uploaded_file($_FILES['perfil_imagem']['tmp_name'], $caminho_completo))
     mysqli_query($conexao, $query);
     mysqli_close($conexao);
 
-    header('Location: perfil.php'); // Redirecione para a página de perfil após a atualização
+    header('Location: perfil.php');
     exit();
 } else {
     echo 'Erro ao fazer upload da imagem.';

@@ -227,18 +227,18 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
 
                 <!-- PRODUTO 2 -->
                 <article class="product__card">
-                    <img src="assets/img/produto2.png" alt="" class="product__img">
-                    <h3 class="product__title">Produto 2</h3>
-                    <span class="product__price">R$ 46,00</span>
-                    <button class="btnVerMais" onclick="openModal2('Produto 2', 'Descrição 2', ['/assets/img/produto2.png', '/assets/img/product2.png', '/assets/img/product3.png'], 'R$ 46,00')">Ver Mais</button>
+                    <img src="/assets/img/produto2/esp32.png" alt="" class="product__img">
+                    <h3 class="product__title">Placa ESP32</h3>
+                    <span class="product__price">R$ 49,90</span>
+                    <button class="btnVerMais" onclick="openModal2('Placa ESP32', 'Desvende o mundo da inovação com a nossa Placa ESP32, uma solução versátil e potente para os entusiastas da eletrônica e desenvolvedores ávidos. Projetada para oferecer desempenho excepcional e conectividade avançada, a ESP32 é a escolha ideal para projetos personalizados e inovadores.', ['/assets/img/produto2/esp321.png', '/assets/img/produto2/esp322.png', '/assets/img/produto2/esp323.png'], 'R$ 49,90')">Ver Mais</button>
                 </article>
 
                 <!-- PRODUTO 3 -->
                 <article class="product__card">
-                    <img src="assets/img/produto3.png" alt="" class="product__img">
-                    <h3 class="product__title">Produto 3 </h3>
-                    <span class="product__price">R$ 39,99</span>
-                    <button class="btnVerMais" onclick="openModal3('Produto 3', 'Descrição 3', ['/assets/img/produto3.png', '/assets/img/product2.png', '/assets/img/product3.png'], 'R$ 39,99')">Ver Mais</button>
+                    <img src="/assets/img/produto3/luminosidade.png" alt="" class="product__img">
+                    <h3 class="product__title">Kit de Sensores </h3>
+                    <span class="product__price">R$ 39,90</span>
+                    <button class="btnVerMais" onclick="openModal3('Kit de Sensores', 'Explore a personalização e a inteligência em seus projetos com nossos Sensores de Umidade, Luminosidade e Temperatura. Desenvolvidos para proporcionar medições precisas em tempo real, esses sensores são ideais para aprimorar a automação em uma variedade de aplicações.', ['/assets/img/produto3/luminosidade.png', '/assets/img/produto3/temperatura.png', '/assets/img/produto3/umidade.png'], 'R$ 39,90')">Ver Mais</button>
                 </article>
 
                 <!-- PRODUTO 5 -->
