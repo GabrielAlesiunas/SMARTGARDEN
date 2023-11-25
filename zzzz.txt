@@ -1,7 +1,8 @@
 VERSÃO PHP: 8.1.13
 
 Coisas que faltam fazer:
-Arrumar o local onde aparece as informações das plantas nas resoluções.
+Arrumar a tabela nas resoluções menores que 425px
+
 
 
 git config --global user.name "Gabriel Raimundo"
