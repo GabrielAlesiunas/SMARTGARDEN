@@ -1,6 +1,11 @@
 <?php
 include_once('config.php');
 
+function formatarData($data)
+{
+    return date("d/m/Y H:i:s", strtotime($data));
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pesquisa = $_POST["pesquisa"];
 
@@ -23,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         while ($row = $result->fetch_assoc()) {
             echo "<tr>
                     <td>{$row['fk_placa_id']}</td>
-                    <td>{$row['data']}</td>
+                    <td>" . formatarData($row['data']) . "</td>
                     <td>{$row['temperatura']}</td>
                     <td>{$row['umidade']}</td>
                     <td>{$row['luminosidade']}</td>
@@ -55,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         while ($row = $result->fetch_assoc()) {
             echo "<tr>
                     <td>{$row['fk_placa_id']}</td>
-                    <td>{$row['data']}</td>
+                    <td>" . formatarData($row['data']) . "</td>
                     <td>{$row['temperatura']}</td>
                     <td>{$row['umidade']}</td>
                     <td>{$row['luminosidade']}</td>

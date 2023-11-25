@@ -70,6 +70,8 @@ body {
   color: var(--text-color);
   transition: .4s;
   overflow: hidden;
+  overflow-y: auto;
+  max-height: 100vh;
 }
 
 button {
@@ -234,7 +236,7 @@ img {
 
   .nav {
     height: calc(var(--header-height) + 1.5rem);
-    column-gap: 1rem;
+    column-gap: 2rem;
   }
 
   .nav__toggle {
@@ -295,7 +297,7 @@ img {
   .nav__logo {
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: -1px;
     display: inline-flex;
     align-items: center;
     column-gap: 0.5rem;
@@ -371,15 +373,75 @@ body.dark-theme {
   color: black;
 }
 
-.dark-theme .h2 {
+.dark-theme h2 {
   color: black;
+}
+
+.dark-theme h2 {
+  color: black;
+}
+
+.dark-theme label {
+  color: white;
+}
+
+.dark-theme .h2 {
+  color: white;
+}
+
+.dark-theme .btnHistorico {
+  background-color: #3e6553;
+}
+
+.dark-theme .btnBuscar {
+  background-color: #3e6553;
+}
+
+.dark-theme .HistPesquisa {
+  background-color: var(--body-color);
+}
+
+.dark-theme input[type="text"] {
+  background-color: rgb(187 187 187);
+}
+
+.dark-theme #resultadoPesquisa {
+  background-color: var(--body-color);
+}
+
+.dark-theme td {
+  background-color: var(--body-color);
+  color: white;
+}
+
+.dark-theme th {
+  background-color: #3e6553;
+  color: white;
+}
+
+.dark-theme .nav__btns {
+  color: white;
 }
 
 /* RESPONSIVIDADE DA TELA CONTROLE */
 
-/* FALTA FAZER 1920X1080 */
 @media screen and (max-width: 1920px) {
-  .HistPesquisa{
+  h2 {
+    color: black;
+    margin-bottom: 20px;
+    font-size: 20px;
+    margin-top: 17px;
+  }
+
+  .nav__btns {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 1rem;
+    color: black;
+    font-size: 22px;
+  }
+
+  .HistPesquisa {
     display: none;
   }
 
@@ -399,10 +461,12 @@ body.dark-theme {
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f9f9f9;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 85%;
     margin-left: 8%;
+    flex-direction: row;
+    font-size: 20px;
   }
 
   #perfilUser {
@@ -550,21 +614,36 @@ body.dark-theme {
   .btnPersonalizar {
     background-color: #006400;
     color: #fff;
-    padding: 10px 20px;
+    padding: 7px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     margin: 0 auto;
     display: block;
+    margin-top: -41px;
+    margin-left: 1000px;
+  }
+
+  .btnConfigPD {
+    background-color: #006400;
+    color: #fff;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 auto;
+    display: inline-block;
     margin-top: 15px;
+    margin-left: 710px;
   }
 
   .btnPersonalizar:hover {
     background-color: #008000;
   }
 
-  .btnConfigPD {
+  margin-lef {
     background-color: #006400;
     color: #fff;
     padding: 10px 20px;
@@ -573,24 +652,50 @@ body.dark-theme {
     cursor: pointer;
     font-size: 16px;
     margin: 0 auto;
-    display: block;
+    display: inline-block;
     margin-top: 15px;
+    margin-left: 711px;
   }
 
   .btnConfigPD:hover {
     background-color: #008000;
   }
 
+  .btnHistorico {
+    padding: 10px;
+    background-color: #006400;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 150px;
+  }
 }
 
 @media screen and (max-width: 1440px) {
+  h2 {
+    color: black;
+    margin-bottom: 20px;
+    font-size: 20px;
+    margin-top: 17px;
+  }
+
+  .nav__btns {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 1rem;
+    color: black;
+    font-size: 22px;
+  }
+
   select {
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 20px;
     width: 85%;
     margin-bottom: 20px;
-    font-size: 22px;
+    font-size: 19px;
     margin-left: 8%;
   }
 
@@ -598,19 +703,21 @@ body.dark-theme {
     display: flex;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+    border-radius: 20px;
+    background-color: white;
     justify-content: center;
     align-items: center;
     width: 85%;
     margin-left: 8%;
-    font-size: 22px;
+    font-size: 20px;
+    text-align: center;
+    color: black;
   }
 
   #perfilUser {
-    margin-top: 100px;
+    margin-top: 70px;
     text-align: center;
-    font-size: 35px;
+    font-size: 30px;
   }
 
   #umidade {
@@ -741,26 +848,27 @@ body.dark-theme {
 
   .selectPlant {
     color: black;
-    font-size: 23px;
+    font-size: 20px;
     margin-left: 135px;
   }
 
   .info {
     color: black;
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .btnPersonalizar {
     background-color: #006400;
     color: #fff;
-    padding: 10px 20px;
+    padding: 7px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 18px;
     margin: 0 auto;
     display: block;
-    margin-top: 15px;
+    margin-top: -41px;
+    margin-left: 760px;
   }
 
   .btnPersonalizar:hover {
@@ -770,14 +878,15 @@ body.dark-theme {
   .btnConfigPD {
     background-color: #006400;
     color: #fff;
-    padding: 10px 20px;
+    padding: 7px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 18px;
     margin: 0 auto;
-    display: block;
+    display: inline-block;
     margin-top: 15px;
+    margin-left: 470px;
   }
 
   .btnConfigPD:hover {
@@ -786,13 +895,25 @@ body.dark-theme {
 
   .nav__btns {
     font-size: 23px;
-    color: white;
+    color: black;
   }
 
   .nav__logo-icon {
     color: var(--first-color);
     font-size: 25px;
   }
+
+  .btnHistorico {
+    padding: 10px;
+    background-color: #006400;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 120px;
+  }
+
 }
 
 @media screen and (max-width: 1360px) {
@@ -835,7 +956,8 @@ body.dark-theme {
     align-items: center;
     width: 85%;
     margin-left: 8%;
-    font-size: 14px;
+    font-size: 18px;
+    text-align: center;
   }
 
   #perfilUser {
@@ -984,14 +1106,15 @@ body.dark-theme {
   .btnPersonalizar {
     background-color: #006400;
     color: #fff;
-    padding: 10px 20px;
+    padding: 8px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 15px;
     margin: 0 auto;
     display: block;
-    margin-top: 15px;
+    margin-top: -39px;
+    margin-left: 710px;
   }
 
   .btnPersonalizar:hover {
@@ -1001,14 +1124,15 @@ body.dark-theme {
   .btnConfigPD {
     background-color: #006400;
     color: #fff;
-    padding: 10px 20px;
+    padding: 8px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 15px;
     margin: 0 auto;
-    display: block;
+    display: inline-block;
     margin-top: 15px;
+    margin-left: 460px;
   }
 
   .btnConfigPD:hover {
@@ -1017,16 +1141,34 @@ body.dark-theme {
 
   .nav__btns {
     font-size: 23px;
-    color: white;
+    color: black;
   }
 
   .nav__logo-icon {
     color: var(--first-color);
     font-size: 25px;
   }
+
+  .btnHistorico {
+    padding: 10px;
+    background-color: #006400;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 120px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
+  h2 {
+    color: black;
+    margin-bottom: 20px;
+    font-size: 15px;
+    margin-top: 17px;
+  }
+
   .nav__link {
     color: var(--title-color);
     font-weight: var(--font-medium);
@@ -1052,7 +1194,7 @@ body.dark-theme {
     border-radius: 4px;
     width: 85%;
     margin-bottom: 20px;
-    font-size: 19px;
+    font-size: 17px;
     margin-left: 8%;
   }
 
@@ -1061,18 +1203,20 @@ body.dark-theme {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: white;
     justify-content: center;
     align-items: center;
     width: 85%;
     margin-left: 8%;
-    font-size: 16px;
+    font-size: 18px;
+    text-align: center;
+    color: black;
   }
 
   #perfilUser {
-    margin-top: 100px;
+    margin-top: 70px;
     text-align: center;
-    font-size: 30px;
+    font-size: 28px;
   }
 
   #umidade {
@@ -1203,26 +1347,29 @@ body.dark-theme {
 
   .selectPlant {
     color: black;
-    font-size: 21px;
-    margin-left: 135px;
+    font-size: 18px;
+    margin-left: 100px;
   }
 
   .info {
     color: black;
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .btnPersonalizar {
     background-color: #006400;
     color: #fff;
-    padding: 10px 20px;
+    padding: 7px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 16px;
     margin: 0 auto;
     display: block;
-    margin-top: 15px;
+    margin-top: -39px;
+    margin-left: 542px;
+    margin-right: 50px;
+    margin-bottom: 20px;
   }
 
   .btnPersonalizar:hover {
@@ -1232,14 +1379,15 @@ body.dark-theme {
   .btnConfigPD {
     background-color: #006400;
     color: #fff;
-    padding: 10px 20px;
+    padding: 7px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 16px;
     margin: 0 auto;
-    display: block;
+    display: inline-block;
     margin-top: 15px;
+    margin-left: 280px;
   }
 
   .btnConfigPD:hover {
@@ -1248,7 +1396,7 @@ body.dark-theme {
 
   .nav__btns {
     font-size: 23px;
-    color: white;
+    color: black;
   }
 
   .nav__logo-icon {
@@ -1256,9 +1404,26 @@ body.dark-theme {
     font-size: 25px;
   }
 
+  .btnHistorico {
+    padding: 10px;
+    background-color: #006400;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 30px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  h2 {
+    color: black;
+    margin-bottom: 20px;
+    font-size: 18px;
+    margin-top: 17px;
+  }
+
   .nav__link {
     color: var(--title-color);
     font-weight: var(--font-medium);
@@ -1284,7 +1449,7 @@ body.dark-theme {
     border-radius: 4px;
     width: 85%;
     margin-bottom: 20px;
-    font-size: 17px;
+    font-size: 16px;
     margin-left: 8%;
   }
 
@@ -1298,7 +1463,8 @@ body.dark-theme {
     align-items: center;
     width: 85%;
     margin-left: 8%;
-    font-size: 14px;
+    font-size: 15px;
+    text-align: center;
   }
 
   #perfilUser {
@@ -1436,7 +1602,7 @@ body.dark-theme {
   .selectPlant {
     color: black;
     font-size: 16px;
-    margin-left: 95px;
+    margin-left: 80px;
   }
 
   .info {
@@ -1447,15 +1613,16 @@ body.dark-theme {
   .btnPersonalizar {
     background-color: #006400;
     color: #fff;
-    padding: 10px 20px;
+    padding: 7px 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 15px;
     margin: 0 auto;
     display: block;
-    margin-top: 15px;
+    margin-top: -37px;
     margin-bottom: 25px;
+    margin-left: 410px;
   }
 
   .btnPersonalizar:hover {
@@ -1465,14 +1632,15 @@ body.dark-theme {
   .btnConfigPD {
     background-color: #006400;
     color: #fff;
-    padding: 10px 20px;
+    padding: 7px 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 15px;
     margin: 0 auto;
-    display: block;
+    display: inline-block;
     margin-top: 15px;
+    margin-left: 170px;
   }
 
   .btnConfigPD:hover {
@@ -1480,8 +1648,8 @@ body.dark-theme {
   }
 
   .nav__btns {
-    font-size: 23px;
-    color: white;
+    font-size: 20px;
+    color: black;
   }
 
   .nav__logo-icon {
@@ -1517,7 +1685,7 @@ body.dark-theme {
   #perfilUser {
     margin-top: 0px;
     text-align: center;
-    font-size: 25px;
+    font-size: 24px;
   }
 
   #umidade {
@@ -1660,15 +1828,16 @@ body.dark-theme {
   .btnPersonalizar {
     background-color: #006400;
     color: #fff;
-    padding: 10px 20px;
+    padding: 7px 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 14px;
     margin: 0 auto;
     display: block;
-    margin-top: 15px;
+    margin-top: -35px;
     margin-bottom: 25px;
+    margin-left: 240px;
   }
 
   .btnPersonalizar:hover {
@@ -1678,14 +1847,15 @@ body.dark-theme {
   .btnConfigPD {
     background-color: #006400;
     color: #fff;
-    padding: 10px 20px;
+    padding: 7px 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
     font-size: 14px;
     margin: 0 auto;
-    display: block;
+    display: inline-block;
     margin-top: 15px;
+    margin-left: 30px;
   }
 
   .btnConfigPD:hover {
@@ -2149,17 +2319,24 @@ table {
   margin-top: 20px;
 }
 
-table, th, td {
-  border: 1px solid #ddd;
+table,
+th,
+td {
+  text-align: center;
 }
 
-th, td {
+th,
+td {
   padding: 12px;
-  text-align: left;
+  text-align: center;
+  color: black;
+  background-color: #fff;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #d2ffd2;
+  text-align: center;
+  color: black;
 }
 
 input[type="text"] {
@@ -2167,34 +2344,30 @@ input[type="text"] {
   margin-bottom: 10px;
 }
 
-button {
+/* .btnHistorico {
   padding: 10px;
-  background-color: #4CAF50;
+  background-color: #006400;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 25px;
   cursor: pointer;
+  margin-top: 15px;
+  margin-left: 110px;
+} */
+
+.btnHistorico:hover {
+  background-color: #006400;
 }
-
-button:hover {
-  background-color: #45a049;
-}
-
-
 
 .HistPesquisa {
-  max-width: 600px;
-  margin: 50px auto;
+  max-width: 620px;
+  margin: 40px auto;
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
-}
-
-h2 {
-  color: #333;
-  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 #formPesquisa {
@@ -2206,32 +2379,38 @@ h2 {
 
 label {
   margin-right: 10px;
+  justify-items: center;
+  margin-top: -13px;
+  font-size: 18px;
+  color: black;
 }
 
 input[type="text"] {
-  padding: 10px;
+  padding: 7px;
   width: 200px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 25px;
   box-sizing: border-box;
+  color: black;
 }
 
-button {
-  padding: 10px 20px;
-  background-color: #4CAF50;
+.btnBuscar {
+  padding: 7px 20px;
+  background-color: #006400;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 25px;
   cursor: pointer;
+  margin-left: 7px;
+  margin-top: -11px;
 }
 
-button:hover {
-  background-color: #45a049;
+.btnBuscar:hover {
+  background-color: #006400;
 }
 
 #resultadoPesquisa {
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 0px;
   padding: 10px;
   background-color: #fff;
 }

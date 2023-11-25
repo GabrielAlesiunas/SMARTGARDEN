@@ -70,7 +70,7 @@ $conexao->close();
         </nav>
     </header>
 
-    <div>
+    <div class="container">
         <h1 id="perfilUser">Controle de Irrigação das Plantas</h1>
 
         <button class="btnConfigPD">Configuração Pré Definido</button>
@@ -123,17 +123,22 @@ $conexao->close();
         <button class="btnHistorico" onclick="exibirHistorico()">Visualizar Histórico</button>
 
         <div class="HistPesquisa">
-            <h2>Pesquisa de Histórico</h2>
+            <h2 class="h2">Pesquisa de Histórico</h2>
 
             <form id="formPesquisa">
                 <label for="pesquisa">Pesquisar:</label>
                 <input type="text" id="pesquisa" name="pesquisa" placeholder="Digite sua pesquisa...">
-                <button type="button" onclick="buscarDados()">Buscar</button>
+                <button class="btnBuscar" type="button" onclick="buscarDados()">Buscar</button>
             </form>
 
             <!-- Local onde os resultados da pesquisa serão exibidos -->
             <div id="resultadoPesquisa"></div>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
 
     <script src="assets/js/script Controle.js"></script>
