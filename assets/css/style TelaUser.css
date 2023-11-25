@@ -51,6 +51,19 @@
   height: 100vh;
 }
 
+/* TEMA DARK TELA USER */
+body.dark-theme {
+  --first-color-dark: hsl(var(--hue), 8%, 20%);
+  --title-color: hsl(var(--hue), 4%, 95%);
+  --text-color: hsl(var(--hue), 4%, 75%);
+  --body-color: hsl(var(--hue), 8%, 12%);
+  --container-color: hsl(var(--hue), 8%, 16%);
+}
+
+.dark-theme .header {
+  --body-color: hsl(var(--hue), 8%, 12%);
+}
+
 @media screen and (max-width: 1920px) {
   #perfilUser {
     margin-top: 150px;
@@ -691,7 +704,7 @@ img {
   .nav__logo {
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: -2px;
     display: inline-flex;
     align-items: center;
     column-gap: 0.5rem;

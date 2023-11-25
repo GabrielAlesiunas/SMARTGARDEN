@@ -74,3 +74,26 @@ function linkAction() {
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+  
+    if (isDarkMode) {
+        document.body.classList.add('dark-theme');
+    }
+  
+    const themeButton = document.getElementById('theme-button');
+    if (themeButton) {
+        themeButton.className = isDarkMode ? 'ri-sun-line change-theme' : 'ri-moon-line change-theme';
+  
+        themeButton.addEventListener('click', function () {
+            document.body.classList.toggle('dark-theme');
+  
+            themeButton.className = document.body.classList.contains('dark-theme') ?
+                'ri-sun-line change-theme' : 'ri-moon-line change-theme';
+  
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-theme') ? 'enabled' : 'disabled');
+        });
+    }
+  });

@@ -9,7 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conexao->query($sql);
 
     if ($result->num_rows > 0) {
-        echo "<h3>Resultados da Pesquisa:</h3>";
         echo "<table class='table'>
             <thead>
                 <tr>
@@ -18,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <th scope='col'>Temperatura</th>
                     <th scope='col'>Umidade</th>
                     <th scope='col'>Luminosidade</th>
-                </tr>;
+                </tr>
             </thead>";
 
         while ($row = $result->fetch_assoc()) {
@@ -33,8 +32,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         echo "</table>";
     } else {
-        echo "<p>Nenhum resultado encontrado.</p>";
+        echo "<p>Nenhum resultado encontrado para a pesquisa: $pesquisa</p>";
+    }
+} else {
+    $sql = "SELECT * FROM situacaoplanta";
+
+    $result = $conexao->query($sql);
+
+    if ($result->num_rows > 0) {
+        echo "<h3>Histórico Completo:</h3>";
+        echo "<table class='table'>
+            <thead>
+                <tr>
+                    <th scope='col'>Id Placa</th>
+                    <th scope='col'>Data</th>
+                    <th scope='col'>Temperatura</th>
+                    <th scope='col'>Umidade</th>
+                    <th scope='col'>Luminosidade</th>
+                </tr>
+            </thead>";
+
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr>
+                    <td>{$row['fk_placa_id']}</td>
+                    <td>{$row['data']}</td>
+                    <td>{$row['temperatura']}</td>
+                    <td>{$row['umidade']}</td>
+                    <td>{$row['luminosidade']}</td>
+                </tr>";
+        }
+
+        echo "</table>";
+    } else {
+        echo "<p>Nenhum registro encontrado.</p>";
     }
 }
 
 $conexao->close();
+?>

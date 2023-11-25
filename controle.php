@@ -120,9 +120,10 @@ $conexao->close();
             <input class="btnAtualizar" type="button" value="Atualizar" onclick="enviarParaBanco()">
         </form>
 
+        <button class="btnHistorico" onclick="exibirHistorico()">Visualizar Histórico</button>
 
-        <div class="perfilUser">
-            <h2>Pesquisa de Dados</h2>
+        <div class="HistPesquisa">
+            <h2>Pesquisa de Histórico</h2>
 
             <form id="formPesquisa">
                 <label for="pesquisa">Pesquisar:</label>
@@ -142,15 +143,21 @@ $conexao->close();
             var pesquisa = document.getElementById("pesquisa").value;
 
             var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function () {
+            xhr.onreadystatechange = function() {
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     document.getElementById("resultadoPesquisa").innerHTML = xhr.responseText;
                 }
             };
 
+            // Sempre envie a solicitação para buscar_dados.php, mesmo que a pesquisa esteja vazia
             xhr.open("POST", "buscar_dados.php", true);
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhr.send("pesquisa=" + pesquisa);
+        }
+
+        function exibirHistorico() {
+            var histPesquisa = document.querySelector('.HistPesquisa');
+            histPesquisa.style.display = (histPesquisa.style.display === 'none' || histPesquisa.style.display === '') ? 'block' : 'none';
         }
     </script>
 </body>

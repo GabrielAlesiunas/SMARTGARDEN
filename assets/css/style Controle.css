@@ -368,12 +368,21 @@ body.dark-theme {
 
 .dark-theme #plantInfo {
   background-color: rgb(187 187 187);
+  color: black;
+}
+
+.dark-theme .h2 {
+  color: black;
 }
 
 /* RESPONSIVIDADE DA TELA CONTROLE */
 
 /* FALTA FAZER 1920X1080 */
 @media screen and (max-width: 1920px) {
+  .HistPesquisa{
+    display: none;
+  }
+
   select {
     padding: 10px;
     border: 1px solid #ccc;
@@ -777,7 +786,7 @@ body.dark-theme {
 
   .nav__btns {
     font-size: 23px;
-    color: black;
+    color: white;
   }
 
   .nav__logo-icon {
@@ -1008,7 +1017,7 @@ body.dark-theme {
 
   .nav__btns {
     font-size: 23px;
-    color: black;
+    color: white;
   }
 
   .nav__logo-icon {
@@ -1239,7 +1248,7 @@ body.dark-theme {
 
   .nav__btns {
     font-size: 23px;
-    color: black;
+    color: white;
   }
 
   .nav__logo-icon {
@@ -1472,7 +1481,7 @@ body.dark-theme {
 
   .nav__btns {
     font-size: 23px;
-    color: black;
+    color: white;
   }
 
   .nav__logo-icon {
@@ -1685,7 +1694,7 @@ body.dark-theme {
 
   .nav__btns {
     font-size: 20px;
-    color: black;
+    color: white;
   }
 
   .nav__logo-icon {
@@ -1898,7 +1907,7 @@ body.dark-theme {
 
   .nav__btns {
     font-size: 20px;
-    color: black;
+    color: white;
   }
 
   .nav__logo-icon {
@@ -2123,11 +2132,106 @@ body.dark-theme {
 
   .nav__btns {
     font-size: 19px;
-    color: black;
+    color: white;
   }
 
   .nav__logo-icon {
     color: var(--first-color);
     font-size: 20px;
   }
+}
+
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+input[type="text"] {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+
+.HistPesquisa {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#formPesquisa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#resultadoPesquisa {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #fff;
 }

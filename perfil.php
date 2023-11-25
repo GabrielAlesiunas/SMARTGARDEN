@@ -46,7 +46,7 @@ mysqli_close($conexao);
 </head>
 
 <body>
-<header class="header" id="header">
+    <header class="header" id="header">
         <nav class="nav container">
             <a href="index.php" class="nav__logo">
                 <i class="ri-leaf-line nav__logo-icon"></i> SmartGarden
@@ -57,7 +57,7 @@ mysqli_close($conexao);
                     <li class="nav__item">
                         <a href="/index.php" class="nav__link active-link">Home</a>
                     </li>
-                   
+
                     <li class="nav__item">
                         <?php if (isset($_SESSION['username'])) : ?>
                             <div class="dropdown">
@@ -75,6 +75,8 @@ mysqli_close($conexao);
             </div>
 
             <div class="nav__btns">
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
                 <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-menu-line"></i>
                 </div>
@@ -83,7 +85,7 @@ mysqli_close($conexao);
     </header>
 
     <main>
-    <h1 id="perfilUser">Perfil do Usuário</h1>
+        <h1 id="perfilUser">Perfil do Usuário</h1>
         <div class="centered-container">
             <div class="profile-image-container">
                 <div class="profile-image-wrapper">
@@ -106,23 +108,23 @@ mysqli_close($conexao);
 <script src="assets/js/script User.js"></script>
 
 <script>
-document.getElementById('deletLink').addEventListener('click', function(e) {
-    e.preventDefault();
+    document.getElementById('deletLink').addEventListener('click', function(e) {
+        e.preventDefault();
 
-    Swal.fire({
-        title: 'Tem certeza que deseja excluir o perfil?',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Sim, excluir!',
-        cancelButtonText: 'Cancelar'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            window.location.href = 'deletPerfil.php';
-        }
+        Swal.fire({
+            title: 'Tem certeza que deseja excluir o perfil?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sim, excluir!',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = 'deletPerfil.php';
+            }
+        });
     });
-});
 </script>
 
 </html>

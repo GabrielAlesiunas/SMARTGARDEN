@@ -130,6 +130,7 @@ function enviarParaBanco() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  buscarDados();
   const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
 
   if (isDarkMode) {
