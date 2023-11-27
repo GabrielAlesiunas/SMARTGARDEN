@@ -91,6 +91,7 @@ $conexao->close();
                 mysqli_close($conexao);
                 ?>
             </select>
+            <input type="submit" value="Enviar">
         </form>
         <div id="plantInfo">
             <p class="info">Selecione uma planta para ver informações.</p>

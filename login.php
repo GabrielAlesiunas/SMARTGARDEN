@@ -21,7 +21,7 @@ if (mysqli_num_rows($result) > 0) {
         icon: "success",
         title: "Login realizado com sucesso!",
         showConfirmButton: false,
-        timer: 2500
+        timer: 1500
     }).then(function() {
         window.location.href = "index.php";
     });

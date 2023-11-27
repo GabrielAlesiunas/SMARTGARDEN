@@ -426,13 +426,6 @@ body.dark-theme {
 /* RESPONSIVIDADE DA TELA CONTROLE */
 
 @media screen and (max-width: 1920px) {
-  h2 {
-    color: black;
-    margin-bottom: 20px;
-    font-size: 20px;
-    margin-top: 17px;
-  }
-
   .nav__btns {
     display: inline-flex;
     align-items: center;
@@ -662,25 +655,67 @@ body.dark-theme {
   }
 
   .btnHistorico {
-    padding: 10px;
+    padding: 7px 15px;
     background-color: #006400;
     color: white;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     margin-top: 15px;
-    margin-left: 150px;
+    margin-left: 160px;
+    font-size: 18px;
+}
+
+th, td {
+  padding: 12px;
+  color: black;
+  background-color: #fff;
+  font-size: 16px;
+}
+
+th {
+  background-color: #d2ffd2;
+  color: black;
+  font-size: 18px;
+}
+
+  #resultadoPesquisa {
+    border-radius: 0px;
+    padding: 10px;
+    background-color: transparent;
+    margin-left: -18px;
+    margin-right: -17px;
+    margin-top: -61px;
   }
+
+  .HistPesquisa {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+  color: black;
+  margin-bottom: 20px;
+  font-size: 25px;
+  margin-top: 17px;
+}
+
+label {
+  margin-right: 10px;
+  justify-items: center;
+  margin-top: -13px;
+  font-size: 20px;
+  color: black;
+}
 }
 
 @media screen and (max-width: 1440px) {
-  h2 {
-    color: black;
-    margin-bottom: 20px;
-    font-size: 20px;
-    margin-top: 17px;
-  }
-
   .nav__btns {
     display: inline-flex;
     align-items: center;
@@ -904,7 +939,7 @@ body.dark-theme {
   }
 
   .btnHistorico {
-    padding: 10px;
+    padding: 7px 15px;
     background-color: #006400;
     color: white;
     border: none;
@@ -912,7 +947,56 @@ body.dark-theme {
     cursor: pointer;
     margin-top: 15px;
     margin-left: 120px;
+    font-size: 18px;
+}
+
+  th, td {
+    padding: 12px;
+    color: black;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+th {
+  background-color: #d2ffd2;
+  color: black;
+  font-size: 17px;
+}
+
+  #resultadoPesquisa {
+    border-radius: 0px;
+    padding: 10px;
+    background-color: transparent;
+    margin-left: -18px;
+    margin-right: -17px;
+    margin-top: -61px;
   }
+
+  .HistPesquisa {
+    max-width: 690px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+  color: black;
+  margin-bottom: 20px;
+  font-size: 23px;
+  margin-top: 17px;
+}
+
+label {
+  margin-right: 10px;
+  justify-items: center;
+  margin-top: -13px;
+  font-size: 19px;
+  color: black;
+}
 
 }
 
@@ -1150,22 +1234,64 @@ body.dark-theme {
   }
 
   .btnHistorico {
-    padding: 10px;
+    padding: 8px 15px;
     background-color: #006400;
     color: white;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     margin-top: 15px;
-    margin-left: 120px;
+    margin-left: 110px;
+    font-size: 15px;
   }
+
+  th, td {
+    padding: 12px;
+    color: black;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+th {
+  background-color: #d2ffd2;
+  color: black;
+  font-size: 16px;
+}
+
+  #resultadoPesquisa {
+    border-radius: 0px;
+    padding: 10px;
+    background-color: transparent;
+    margin-left: -18px;
+    margin-right: -17px;
+    margin-top: -61px;
+  }
+
+  .HistPesquisa {
+    max-width: 685px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+  color: black;
+  margin-bottom: 20px;
+  font-size: 22px;
+  margin-top: 17px;
+}
+
 }
 
 @media screen and (max-width: 1024px) {
   h2 {
     color: black;
     margin-bottom: 20px;
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 17px;
   }
 
@@ -1405,15 +1531,51 @@ body.dark-theme {
   }
 
   .btnHistorico {
-    padding: 10px;
+    padding: 7px 15px;
     background-color: #006400;
     color: white;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     margin-top: 15px;
-    margin-left: 90px;
+    margin-left: 80px;
+    font-size: 16px;
   }
+
+  th, td {
+    padding: 12px;
+    text-align: center;
+    color: black;
+    background-color: #fff;
+    font-size: 15px;
+}
+
+  th {
+    background-color: #d2ffd2;
+    color: black;
+    font-size: 15px;
+}
+
+  #resultadoPesquisa {
+    border-radius: 0px;
+    padding: 10px;
+    background-color: transparent;
+    margin-left: -18px;
+    margin-right: -17px;
+    margin-top: -61px;
+  }
+
+  .HistPesquisa {
+    max-width: 680px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
 }
 
 @media screen and (max-width: 768px) {
@@ -1658,7 +1820,7 @@ body.dark-theme {
   }
 
   .btnHistorico {
-    padding: 10px;
+    padding: 7px 10px;
     background-color: #006400;
     color: white;
     border: none;
@@ -1666,7 +1828,40 @@ body.dark-theme {
     cursor: pointer;
     margin-top: 15px;
     margin-left: 60px;
+    font-size: 15px;
   }
+
+  th,
+  td {
+    padding: 12px;
+    text-align: center;
+    color: black;
+    background-color: #fff;
+    font-size: 14px;
+  }
+
+  th {
+    background-color: #d2ffd2;
+    color: black;
+    font-size: 14px;
+  }
+
+  #resultadoPesquisa {
+    border-radius: 0px;
+    padding: 10px;
+    background-color: transparent;
+    margin-left: -18px;
+    margin-right: -17px;
+    margin-top: -61px;
+  }
+
+  label {
+    margin-right: 10px;
+    justify-items: center;
+    margin-top: -13px;
+    font-size: 17px;
+    color: black;
+}
 }
 
 @media screen and (max-width: 425px) {
@@ -1882,7 +2077,7 @@ body.dark-theme {
   }
 
   .btnHistorico {
-    padding: 10px;
+    padding: 7px 10px;
     background-color: #006400;
     color: white;
     border: none;
@@ -1890,6 +2085,30 @@ body.dark-theme {
     cursor: pointer;
     margin-top: 15px;
     margin-left: 30px;
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 12px;
+    text-align: center;
+    color: black;
+    background-color: #fff;
+    font-size: 9px;
+  }
+
+  th {
+    background-color: #d2ffd2;
+    color: black;
+    font-size: 9px;
+  }
+
+  #resultadoPesquisa {
+    border-radius: 0px;
+    padding: 10px;
+    background-color: transparent;
+    margin-left: -22px;
+    margin-top: -60px;
   }
 }
 
@@ -2109,16 +2328,65 @@ body.dark-theme {
   }
 
   .btnHistorico {
-    padding: 10px;
-    background-color: #006400;
     padding: 4px 5px;
+    background-color: #006400;
     color: white;
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    margin-top: 15px;
-    margin-left: 10px;
+    margin-top: 14px;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+  th,
+  td {
+    padding: 12px;
+    text-align: center;
+    color: black;
+    background-color: #fff;
+    font-size: 8px;
   }
+
+  th {
+    background-color: #d2ffd2;
+    color: black;
+    font-size: 7px;
+  }
+
+  #resultadoPesquisa {
+    border-radius: 0px;
+    padding: 10px;
+    background-color: transparent;
+    margin-left: -24px;
+    margin-top: -60px;
+}
+
+  input[type="text"] {
+    padding: 7px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+    color: black;
+    height: 33px;
+}
+
+.btnBuscar {
+  display: flex;
+  padding: 5px 17px;
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: 7px;
+  margin-top: -11px;
+  justify-content: center;
+  align-items: baseline;
+}
+
+
 }
 
 @media screen and (max-width: 320px) {
@@ -2359,6 +2627,66 @@ body.dark-theme {
     margin-left: 0px;
     font-size: 13px;
   }
+
+  th,
+  td {
+    padding: 12px;
+    text-align: center;
+    color: black;
+    background-color: #fff;
+    font-size: 7px;
+  }
+
+  th {
+    background-color: #d2ffd2;
+    color: black;
+    font-size: 6px;
+  }
+
+  #resultadoPesquisa {
+    border-radius: 0px;
+    padding: 10px;
+    background-color: transparent;
+    margin-left: -24px;
+    margin-top: -60px;
+}
+
+  input[type="text"] {
+    padding: 7px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+    color: black;
+    height: 33px;
+}
+
+.btnBuscar {
+  display: flex;
+  padding: 5px 17px;
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: 7px;
+  margin-top: -11px;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.HistPesquisa {
+  width: 300px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: -15px;
+}
+
 }
 
 
@@ -2375,7 +2703,7 @@ td {
   text-align: center;
 }
 
-th,
+/* th,
 td {
   padding: 12px;
   text-align: center;
@@ -2387,7 +2715,7 @@ th {
   background-color: #d2ffd2;
   text-align: center;
   color: black;
-}
+} */
 
 input[type="text"] {
   padding: 8px;
@@ -2409,7 +2737,7 @@ input[type="text"] {
   background-color: #006400;
 }
 
-.HistPesquisa {
+/* .HistPesquisa {
   max-width: 620px;
   margin: 40px auto;
   background-color: #fff;
@@ -2418,7 +2746,7 @@ input[type="text"] {
   padding: 20px;
   text-align: center;
   margin-top: 10px;
-}
+} */
 
 #formPesquisa {
   display: flex;
@@ -2427,13 +2755,13 @@ input[type="text"] {
   margin-bottom: 20px;
 }
 
-label {
+/* label {
   margin-right: 10px;
   justify-items: center;
   margin-top: -13px;
   font-size: 16px;
   color: black;
-}
+} */
 
 input[type="text"] {
   padding: 7px;
@@ -2462,8 +2790,8 @@ input[type="text"] {
   background-color: #006400;
 }
 
-#resultadoPesquisa {
+/* #resultadoPesquisa {
   border-radius: 0px;
   padding: 10px;
   background-color: #fff;
-}
+} */
