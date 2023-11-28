@@ -62,12 +62,46 @@ document.addEventListener("DOMContentLoaded", function () {
           plantInfo.innerHTML = "Erro ao buscar a planta.";
         } else {
           plantInfo.innerHTML = `
-              <h2>Informações da Planta ${selectedPlantName}</h2>
-              <p>Nome: ${response.nome}</p>
-              <p>Temperatura Ideal: ${response.tempideal}ºC</p>
-              <p>Umidade Ideal: ${response.umideal}g/m³</p>
-              <p>Luminosidade Ideal: ${response.lumideal}cd</p>
+          <div class="info">
+          <h2>Informações da Planta ${selectedPlantName}</h2>
+          <p>Nome: ${response.nome}</p>
+          <p>Temperatura Ideal: ${response.tempideal}ºC</p>
+          <p>Umidade Ideal: ${response.umideal}g/m³</p>
+          <p>Luminosidade Ideal: ${response.lumideal}cd</p>
+          </div>
+
+          <div>
+          <form id="placaForm" method="get">
+          <input type="hidden" name="temperatura" value="${response.tempideal}"/>
+          <input type="hidden" name="umidade" value="${response.umideal}"/>
+          <input type="hidden" name="luminosidade" value="${response.lumideal}"/>
+          </form>
+          </div>    
+
+          <div class="btn">
+          <input type="submit" class="enviar" value="Enviar">
+          </div>  
             `;
+
+          const placaForm = document.getElementById("placaForm");
+
+          placaForm.addEventListener("submit", function (event) {
+            event.preventDefault(); // Evitar o envio padrão do formulário
+
+            const formData = new FormData(placaForm);
+
+            const xhrPlaca = new XMLHttpRequest();
+            xhrPlaca.open("POST", "enviar_dados_placa.php", true);
+            
+            xhrPlaca.onreadystatechange = function () {
+              if (xhrPlaca.readyState === 4 && xhrPlaca.status === 200) {
+                // Lógica de manipulação da resposta, se necessário
+                console.log(xhrPlaca.responseText);
+              }
+            };
+
+            xhrPlaca.send(formData);
+          });
         }
       }
     };

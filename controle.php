@@ -76,7 +76,7 @@ $conexao->close();
         <button class="btnConfigPD">Configuração Pré Definido</button>
         <button class="btnPersonalizar">Personalizar</button>
 
-        <form>
+        <form method="get">
             <label class="selectPlant" for="selectPlant">Selecione uma planta:</label>
             <select id="selectPlant" name="nomePlanta">
                 <option value="">Selecione</option>
@@ -91,7 +91,9 @@ $conexao->close();
                 mysqli_close($conexao);
                 ?>
             </select>
-            <input type="submit" value="Enviar">
+            <input type="hidden" name="nome"/>
+        </form>
+        <form method="get">
         </form>
         <div id="plantInfo">
             <p class="info">Selecione uma planta para ver informações.</p>

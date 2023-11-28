@@ -55,6 +55,8 @@ html {
 }
 
 
+
+
 body,
 button,
 input,
@@ -602,6 +604,7 @@ body.dark-theme {
   .info {
     color: black;
     font-size: 16px;
+    display: flex;
   }
 
   .btnPersonalizar {
@@ -747,6 +750,7 @@ label {
     font-size: 20px;
     text-align: center;
     color: black;
+    flex-direction: column;
   }
 
   #perfilUser {
@@ -1862,6 +1866,18 @@ h2 {
     font-size: 17px;
     color: black;
 }
+
+.enviar{
+  background-color: #006400;
+  border-radius: 25px;
+  width: 70px;
+  height: 29px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
 }
 
 @media screen and (max-width: 425px) {
@@ -2110,6 +2126,18 @@ h2 {
     margin-left: -22px;
     margin-top: -60px;
   }
+
+  .enviar {
+    background-color: #006400;
+    border-radius: 25px;
+    width: 70px;
+    height: 29px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
 }
 
 @media screen and (max-width: 375px) {
@@ -2387,6 +2415,16 @@ h2 {
 }
 
 
+.enviar {
+  background-color: #006400;
+  border-radius: 25px;
+  width: 70px;
+  height: 26px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  margin-top: 8px;
+}
 }
 
 @media screen and (max-width: 320px) {
@@ -2687,6 +2725,17 @@ h2 {
   margin-left: -15px;
 }
 
+.enviar {
+  background-color: #006400;
+  border-radius: 25px;
+  width: 70px;
+  height: 26px;
+  border: none;
+  color: white;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
 }
 
 
@@ -2703,50 +2752,14 @@ td {
   text-align: center;
 }
 
-/* th,
-td {
-  padding: 12px;
-  text-align: center;
-  color: black;
-  background-color: #fff;
-}
-
-th {
-  background-color: #d2ffd2;
-  text-align: center;
-  color: black;
-} */
-
 input[type="text"] {
   padding: 8px;
   margin-bottom: 10px;
 }
 
-/* .btnHistorico {
-  padding: 10px;
-  background-color: #006400;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  margin-top: 15px;
-  margin-left: 110px;
-} */
-
 .btnHistorico:hover {
   background-color: #006400;
 }
-
-/* .HistPesquisa {
-  max-width: 620px;
-  margin: 40px auto;
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  margin-top: 10px;
-} */
 
 #formPesquisa {
   display: flex;
@@ -2754,14 +2767,6 @@ input[type="text"] {
   align-items: center;
   margin-bottom: 20px;
 }
-
-/* label {
-  margin-right: 10px;
-  justify-items: center;
-  margin-top: -13px;
-  font-size: 16px;
-  color: black;
-} */
 
 input[type="text"] {
   padding: 7px;
@@ -2789,9 +2794,3 @@ input[type="text"] {
 .btnBuscar:hover {
   background-color: #006400;
 }
-
-/* #resultadoPesquisa {
-  border-radius: 0px;
-  padding: 10px;
-  background-color: #fff;
-} */
