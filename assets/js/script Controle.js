@@ -62,25 +62,19 @@ document.addEventListener("DOMContentLoaded", function () {
           plantInfo.innerHTML = "Erro ao buscar a planta.";
         } else {
           plantInfo.innerHTML = `
-          <div class="info">
           <h2>Informações da Planta ${selectedPlantName}</h2>
           <p>Nome: ${response.nome}</p>
           <p>Temperatura Ideal: ${response.tempideal}ºC</p>
           <p>Umidade Ideal: ${response.umideal}g/m³</p>
           <p>Luminosidade Ideal: ${response.lumideal}cd</p>
-          </div>
 
-          <div>
           <form id="placaForm" method="get">
           <input type="hidden" name="temperatura" value="${response.tempideal}"/>
           <input type="hidden" name="umidade" value="${response.umideal}"/>
           <input type="hidden" name="luminosidade" value="${response.lumideal}"/>
-          </form>
-          </div>    
+          </form>   
 
-          <div class="btn">
           <input type="submit" class="enviar" value="Enviar">
-          </div>  
             `;
 
           const placaForm = document.getElementById("placaForm");

@@ -425,6 +425,10 @@ body.dark-theme {
   color: white;
 }
 
+.dark-theme .enviar {
+  background-color: #3e6553;
+}
+
 /* RESPONSIVIDADE DA TELA CONTROLE */
 
 @media screen and (max-width: 1920px) {
@@ -456,13 +460,13 @@ body.dark-theme {
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f9f9f9;
-    justify-content: space-around;
     align-items: center;
     width: 85%;
     margin-left: 8%;
-    flex-direction: row;
     font-size: 20px;
-  }
+    text-align: center;
+    flex-direction: column;
+}
 
   #perfilUser {
     margin-top: 60px;
@@ -705,7 +709,7 @@ th {
 h2 {
   color: black;
   margin-bottom: 20px;
-  font-size: 25px;
+  font-size: 26px;
   margin-top: 17px;
 }
 
@@ -715,6 +719,17 @@ label {
   margin-top: -13px;
   font-size: 20px;
   color: black;
+}
+
+.enviar {
+  background-color: #006400;
+  border-radius: 25px;
+  width: 95px;
+  height: 42px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin-top: 12px;
 }
 }
 
@@ -1002,6 +1017,17 @@ label {
   color: black;
 }
 
+.enviar {
+  background-color: #006400;
+  border-radius: 25px;
+  width: 77px;
+  height: 36px;
+  border: none;
+  color: white;
+  font-size: 17px;
+  margin-top: 12px;
+}
+
 }
 
 @media screen and (max-width: 1360px) {
@@ -1287,6 +1313,17 @@ h2 {
   margin-bottom: 20px;
   font-size: 22px;
   margin-top: 17px;
+}
+
+.enviar {
+  background-color: #006400;
+  border-radius: 25px;
+  width: 75px;
+  height: 36px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  margin-top: 12px;
 }
 
 }
@@ -1578,6 +1615,17 @@ h2 {
     padding: 20px;
     text-align: center;
     margin-top: 20px;
+}
+
+.enviar {
+  background-color: #006400;
+  border-radius: 25px;
+  width: 74px;
+  height: 30px;
+  border: none;
+  color: white;
+  font-size: 15px;
+  margin-top: 12px;
 }
 
 }
