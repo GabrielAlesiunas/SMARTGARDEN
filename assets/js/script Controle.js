@@ -28,27 +28,30 @@ function linkAction() {
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
+document.addEventListener("DOMContentLoaded", function () {
+  var formAtualizar = document.getElementById("formAtualizar");
 
-document.addEventListener('DOMContentLoaded', function () {
-  var formAtualizar = document.getElementById('formAtualizar');
+  var btnConfigPD = document.querySelector(".btnConfigPD");
+  var btnPersonalizar = document.querySelector(".btnPersonalizar");
 
-  var btnConfigPD = document.querySelector('.btnConfigPD');
-  var btnPersonalizar = document.querySelector('.btnPersonalizar');
-
-  btnConfigPD.addEventListener('click', function () {
-      formAtualizar.style.display = 'none';
+  btnConfigPD.addEventListener("click", function () {
+    formAtualizar.style.display = "none";
   });
- 
-  btnPersonalizar.addEventListener('click', function () {
-      formAtualizar.style.display = 'block';
+
+  btnPersonalizar.addEventListener("click", function () {
+    formAtualizar.style.display = "block";
   });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("DOM carregado");
+
   const selectPlant = document.getElementById("selectPlant");
   const plantInfo = document.getElementById("plantInfo");
 
   selectPlant.addEventListener("change", function () {
+    console.log("Seleção de planta alterada");
+
     const selectedPlantName = selectPlant.value;
 
     const xhr = new XMLHttpRequest();
@@ -62,40 +65,45 @@ document.addEventListener("DOMContentLoaded", function () {
           plantInfo.innerHTML = "Erro ao buscar a planta.";
         } else {
           plantInfo.innerHTML = `
-          <h2>Informações da Planta ${selectedPlantName}</h2>
-          <p>Nome: ${response.nome}</p>
-          <p>Temperatura Ideal: ${response.tempideal}ºC</p>
-          <p>Umidade Ideal: ${response.umideal}g/m³</p>
-          <p>Luminosidade Ideal: ${response.lumideal}cd</p>
+            <h2>Informações da Planta ${selectedPlantName}</h2>
+            <p>Nome: ${response.nome}</p>
+            <p>Temperatura Ideal: ${response.tempideal}ºC</p>
+            <p>Umidade Ideal: ${response.umideal}g/m³</p>
+            <p>Luminosidade Ideal: ${response.lumideal}cd</p>
 
-          <form id="placaForm" method="get">
-          <input type="hidden" name="temperatura" value="${response.tempideal}"/>
-          <input type="hidden" name="umidade" value="${response.umideal}"/>
-          <input type="hidden" name="luminosidade" value="${response.lumideal}"/>
-          </form>   
+            <form id="placaForm" method="post">
+              <input type="hidden" name="temperatura" value="${response.tempideal}" />
+              <input type="hidden" name="umidade" value="${response.umideal}" />
+              <input type="hidden" name="luminosidade" value="${response.lumideal}" />
+            </form>
 
-          <input type="submit" class="enviar" value="Enviar">
-            `;
+            <input type="button" class="enviar" value="Enviar" id="enviarButton">
+          `;
 
-          const placaForm = document.getElementById("placaForm");
+          const enviarButton = document.getElementById("enviarButton");
 
-          placaForm.addEventListener("submit", function (event) {
-            event.preventDefault(); // Evitar o envio padrão do formulário
+          if (enviarButton) {
+            console.log("Botão encontrado");
 
-            const formData = new FormData(placaForm);
+            enviarButton.addEventListener("click", function () {
+              console.log("Botão clicado");
 
-            const xhrPlaca = new XMLHttpRequest();
-            xhrPlaca.open("POST", "enviar_dados_placa.php", true);
-            
-            xhrPlaca.onreadystatechange = function () {
-              if (xhrPlaca.readyState === 4 && xhrPlaca.status === 200) {
-                // Lógica de manipulação da resposta, se necessário
-                console.log(xhrPlaca.responseText);
-              }
-            };
+              const formData = new FormData(document.getElementById("placaForm"));
 
-            xhrPlaca.send(formData);
-          });
+              const xhrPlaca = new XMLHttpRequest();
+              xhrPlaca.open("POST", "enviar_dados_placa.php", true);
+
+              xhrPlaca.onreadystatechange = function () {
+                if (xhrPlaca.readyState === 4 && xhrPlaca.status === 200) {
+                  console.log(xhrPlaca.responseText);
+                }
+              };
+
+              xhrPlaca.send(formData);
+            });
+          } else {
+            console.log("Botão não encontrado");
+          }
         }
       }
     };
@@ -122,60 +130,65 @@ document.getElementById("selectPlant").addEventListener("change", function () {
   }
 });
 
-
 function exibirLuminosidade(valor) {
-  document.getElementById('spanLuminosidade').textContent = valor + '%';
+  document.getElementById("spanLuminosidade").textContent = valor + "%";
 }
 
 function exibirUmidade(valor) {
-  document.getElementById('spanUmidade').textContent = valor + '%';
+  document.getElementById("spanUmidade").textContent = valor + "%";
 }
 
 function exibirTemperatura(valor) {
-  document.getElementById('spanTemperatura').textContent = valor + '°C';
+  document.getElementById("spanTemperatura").textContent = valor + "°C";
 }
 
 function enviarParaBanco() {
-  var luminosidade = document.getElementById('volLuminosidade').value;
-  var temperatura = document.getElementById('volTemperatura').value;
-  var umidade = document.getElementById('volUmidade').value;
+  var luminosidade = document.getElementById("volLuminosidade").value;
+  var temperatura = document.getElementById("volTemperatura").value;
+  var umidade = document.getElementById("volUmidade").value;
 
   var formData = new FormData();
-  formData.append('luminosidade', luminosidade);
-  formData.append('temperatura', temperatura);
-  formData.append('umidade', umidade);
+  formData.append("luminosidade", luminosidade);
+  formData.append("temperatura", temperatura);
+  formData.append("umidade", umidade);
 
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'atualizarInfoPlantas.php', true);
+  xhr.open("POST", "atualizarInfoPlantas.php", true);
   xhr.onload = function () {
-      if (xhr.status === 200) {
-          console.log(xhr.responseText);
-      } else {
-          console.error('Erro ao enviar para o servidor. Status: ' + xhr.status);
-      }
+    if (xhr.status === 200) {
+      console.log(xhr.responseText);
+    } else {
+      console.error("Erro ao enviar para o servidor. Status: " + xhr.status);
+    }
   };
   xhr.send(formData);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   buscarDados();
-  const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+  const isDarkMode = localStorage.getItem("darkMode") === "enabled";
 
   if (isDarkMode) {
-      document.body.classList.add('dark-theme');
+    document.body.classList.add("dark-theme");
   }
 
-  const themeButton = document.getElementById('theme-button');
+  const themeButton = document.getElementById("theme-button");
   if (themeButton) {
-      themeButton.className = isDarkMode ? 'ri-sun-line change-theme' : 'ri-moon-line change-theme';
+    themeButton.className = isDarkMode
+      ? "ri-sun-line change-theme"
+      : "ri-moon-line change-theme";
 
-      themeButton.addEventListener('click', function () {
-          document.body.classList.toggle('dark-theme');
+    themeButton.addEventListener("click", function () {
+      document.body.classList.toggle("dark-theme");
 
-          themeButton.className = document.body.classList.contains('dark-theme') ?
-              'ri-sun-line change-theme' : 'ri-moon-line change-theme';
+      themeButton.className = document.body.classList.contains("dark-theme")
+        ? "ri-sun-line change-theme"
+        : "ri-moon-line change-theme";
 
-          localStorage.setItem('darkMode', document.body.classList.contains('dark-theme') ? 'enabled' : 'disabled');
-      });
+      localStorage.setItem(
+        "darkMode",
+        document.body.classList.contains("dark-theme") ? "enabled" : "disabled"
+      );
+    });
   }
 });
