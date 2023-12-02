@@ -157,7 +157,6 @@ $conexao->close();
                 }
             };
 
-            // Sempre envie a solicitação para buscar_dados.php, mesmo que a pesquisa esteja vazia
             xhr.open("POST", "buscar_dados.php", true);
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xhr.send("pesquisa=" + pesquisa);
