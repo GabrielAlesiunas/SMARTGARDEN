@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 27-Nov-2023 às 23:17
+-- Tempo de geração: 04-Dez-2023 às 18:33
 -- Versão do servidor: 8.0.31
 -- versão do PHP: 8.1.13
 
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `placa` (
 --
 
 INSERT INTO `placa` (`id`, `mac`, `nome`, `temperatura`, `luminosidade`, `umidade`, `fk_usuario_id`) VALUES
-(1, 'QR CODE', 'PLACA 1', 23, 50, 50, 1);
+(1, 'QR CODE', 'PLACA 1', 15, 54, 67, 1);
 
 -- --------------------------------------------------------
 
@@ -68,7 +68,6 @@ CREATE TABLE IF NOT EXISTS `plantas` (
 --
 
 INSERT INTO `plantas` (`id`, `nome`, `tempideal`, `umideal`, `lumideal`) VALUES
-(1, 'maconha', 21, 24, 40),
 (2, 'Alface', 16, 60, 3500),
 (3, 'Tomate', 21, 65, 6500),
 (4, 'Cenoura', 19, 80, 3500),
@@ -101,6 +100,8 @@ CREATE TABLE IF NOT EXISTS `produto` (
 
 INSERT INTO `produto` (`id`, `nome`, `descricao`, `valor`) VALUES
 (1, 'Irrigador Automático Inteligente com Arduino', 'Transforme o seu jardim em um oásis verdejante e vibrante com o nosso Irrigador Automático Inteligente baseado em Arduino. Este inovador sistema de irrigação é a solução perfeita para manter suas plan', 119.9),
+(2, 'Placa ESP32', 'Desvende o mundo da inovação com a nossa Placa ESP32, uma solução versátil e potente para os entusiastas da eletrônica e desenvolvedores ávidos. Projetada para oferecer desempenho excepcional e conect', 49),
+(3, 'Kit de Sensores', 'Explore a personalização e a inteligência em seus projetos com nossos Sensores de Umidade, Luminosidade e Temperatura. Desenvolvidos para proporcionar medições precisas em tempo real, esses sensores s', 39),
 (4, 'Hortelã', 'Desperte seu jardineiro interior com o nosso elegante Vaso de Hortelã Fresca. Este pequeno jardim em casa é a maneira perfeita de cultivar hortelã orgânica e fresca em sua cozinha, varanda ou jardim. ', 19.9),
 (5, 'Bertalha Roxa', 'Bem-vindo ao mundo da Bertalha Roxa, uma planta fascinante que combina beleza e sabor em uma única experiência de cultivo. Esta variedade de bertalha não apenas encanta com suas folhas roxas vibrantes', 13.5),
 (6, 'Menta', 'Bem-vindo à nossa seleção de Menta Fresca, um ingrediente versátil que pode transformar suas receitas e momentos de relaxamento. A menta é conhecida por seu sabor refrescante e aroma revigorante, torn', 29.9);
@@ -146,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `senha` varchar(20) DEFAULT NULL,
   `foto_perfil` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `usuario`
@@ -155,7 +156,8 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`, `foto_perfil`) VALUES
 (1, 'Gabriel', 'gabriel.alesiunas@yahoo.com.br', 'gabriel123', 'assets/img/imgPerfiluserpadrao.png'),
 (8, 'admin', 'admin@gmail.com', 'Admin123@', 'assets/img/imgPerfilcorinthians.jpeg'),
-(26, 'teste21', 'teste21@gmail.com', '123', 'assets/img/imgPerfil/userpadrao.png');
+(26, 'teste21', 'teste21@gmail.com', '123', 'assets/img/imgPerfil/userpadrao.png'),
+(27, 'tcc', 'tcc@gmail.com', 'tcc123', 'assets/img/imgPerfillinux.png');
 
 --
 -- Restrições para despejos de tabelas
